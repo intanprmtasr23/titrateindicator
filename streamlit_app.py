@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 import numpy as np
 
 # Konfigurasi halaman
@@ -81,33 +80,6 @@ with tab1:  # Titrasi Asam-Basa
             st.info(f"{name}: pH {low}-{high} ({change})")
     else:
         st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
-    
-    # Visualisasi
-    st.subheader("Visualisasi Rentang pH Indikator")
-    fig, ax = plt.subplots(figsize=(10, 6))
-    
-    # Plot garis pH
-    ax.axvline(x=pH_eq, color='red', linestyle='--', label=f'pH Ekuivalen ({pH_eq:.1f})')
-    
-    # Plot rentang indikator
-    y_pos = 1
-    for name, (low, high, _) in indikator_ab.items():
-        if name in [ind[0] for ind in rec_indicators]:
-            ax.hlines(y=y_pos, xmin=low, xmax=high, colors='green', linewidth=5, label=name)
-        else:
-            ax.hlines(y=y_pos, xmin=low, xmax=high, colors='gray', linewidth=3, alpha=0.5)
-        ax.text(high+0.2, y_pos, name, va='center')
-        y_pos += 1
-    
-    ax.set_xlim(0, 14)
-    ax.set_ylim(0, y_pos)
-    ax.set_xlabel("pH")
-    ax.set_yticks([])
-    ax.set_title("Rentang pH Indikator Asam-Basa")
-    ax.legend(loc='upper right')
-    ax.grid(True, axis='x')
-    
-    st.pyplot(fig)
 
 with tab2:  # Titrasi Redoks
     st.header("Titrasi Redoks")
@@ -136,38 +108,6 @@ with tab2:  # Titrasi Redoks
           - Tak berwarna ke biru tua (kompleks I₂-kanji)
         - *Aplikasi*: Penentuan senyawa pengoksidasi (melalui I⁻) atau zat pereduksi
         """)
-        
-    elif metode_redoks == "Dikromatometri":
-        st.markdown("""
-        ### Dikromatometri (Menggunakan K₂Cr₂O₇)
-        - *Indikator*: 
-          1. Difenilamin sulfonat
-            - Perubahan warna: Ungu ke hijau
-          2. Ferroin (fenaantrolin besi)
-            - Perubahan warna: Merah ke biru pucat
-        - *Aplikasi*: Penentuan Fe²⁺, COD (Chemical Oxygen Demand)
-        """)
-        
-    elif metode_redoks == "Serimetri":
-        st.markdown("""
-        ### Serimetri (Menggunakan Ce⁴⁺)
-        - *Indikator*: 
-          1. Ferroin
-            - Perubahan warna: Merah ke biru pucat
-          2. N-fenilantranilat
-            - Perubahan warna: Ungu ke hijau
-        - *Aplikasi*: Penentuan senyawa organik, Fe²⁺
-        """)
-        
-    else:  # Bromatometri
-        st.markdown("""
-        ### Bromatometri (Menggunakan KBrO₃)
-        - *Indikator*: 
-          1. Metil merah atau metil jingga
-            - Perubahan warna: Merah ke tak berwarna
-          2. Reaksi dengan senyawa organik membentuk bromoform
-        - *Aplikasi*: Penentuan senyawa organik aromatik
-        """)
 
 with tab3:  # Titrasi Kompleksometri
     st.header("Titrasi Kompleksometri")
@@ -187,52 +127,6 @@ with tab3:  # Titrasi Kompleksometri
           - pH 10 (buffer NH₃/NH₄Cl)
           - Suhu ruang
         - *Titran*: EDTA 0.01 M
-        """)
-        
-    elif ion_logam == "Zn²⁺":
-        st.markdown("""
-        ### Penentuan Zn²⁺
-        - *Indikator*: 
-          1. Eriochrome Black T (EBT)
-            - Perubahan warna: Merah anggur ke biru
-          2. Murexide
-            - Perubahan warna: Merah ke ungu
-        - *Kondisi*: 
-          - pH 10 untuk EBT
-          - pH 9 untuk Murexide
-        """)
-        
-    elif ion_logam == "Cu²⁺":
-        st.markdown("""
-        ### Penentuan Cu²⁺
-        - *Indikator*: 
-          1. Murexide
-            - Perubahan warna: Kuning ke ungu
-          2. PAN (1-(2-Piridilazo)-2-naftol)
-            - Perubahan warna: Kuning ke merah
-        - *Kondisi*: 
-          - pH 5-6 (buffer asetat)
-        """)
-        
-    elif ion_logam == "Fe³⁺":
-        st.markdown("""
-        ### Penentuan Fe³⁺
-        - *Indikator*: Sulfosalicylic acid
-        - *Perubahan warna*: Ungu ke kuning
-        - *Kondisi*: 
-          - pH 1.5-3.0
-          - Suhu 50-60°C
-        """)
-        
-    else:
-        st.markdown(f"""
-        ### Penentuan {ion_logam}
-        - *Indikator umum*: 
-          1. Xylenol Orange
-            - Perubahan warna: Merah ke kuning
-          2. Calmagite
-            - Perubahan warna: Merah ke biru
-        - *Kondisi*: pH disesuaikan dengan ion logam
         """)
 
 with tab4:  # Titrasi Pengendapan
@@ -254,42 +148,6 @@ with tab4:  # Titrasi Pengendapan
           - Tidak boleh ada amonia
         - *Aplikasi*: Penentuan Cl⁻, Br⁻
         """)
-        
-    elif metode_pengendapan == "Argentometri (Volhard)":
-        st.markdown("""
-        ### Metode Volhard (Penentuan Halida Tidak Langsung)
-        - *Indikator*: Ion besi(III) (Fe³⁺)
-        - *Perubahan warna*: Tak berwarna ke merah (FeSCN²⁺)
-        - *Kondisi*: 
-          - Suasana asam nitrat
-          - Titrasi balik dengan SCN⁻
-        - *Aplikasi*: Penentuan Cl⁻, Br⁻, I⁻, SCN⁻
-        """)
-        
-    elif metode_pengendapan == "Argentometri (Fajans)":
-        st.markdown("""
-        ### Metode Fajans (Indikator Adsorpsi)
-        - *Indikator*: 
-          1. Fluorescein
-            - Perubahan warna: Hijau kekuningan ke merah muda
-          2. Dichlorofluorescein
-            - Perubahan warna: Kuning ke merah muda
-        - *Kondisi*: 
-          - pH sesuai indikator
-          - Partikel koloid harus terbentuk
-        - *Aplikasi*: Penentuan halida dengan endpoint adsorpsi
-        """)
-        
-    else:
-        st.markdown(f"""
-        ### {metode_pengendapan}
-        - *Prinsip umum*: 
-          - Pembentukan endapan yang stoikiometris
-          - Penggunaan indikator yang bereaksi dengan kelebihan titran
-        - *Contoh aplikasi*: 
-          - Penentuan sulfat dengan Ba²⁺
-          - Penentuan merkuri dengan tiosianat
-        """)
 
 # Informasi tambahan di sidebar
 with st.sidebar:
@@ -298,22 +156,17 @@ with st.sidebar:
     1. Pilih jenis titrasi dari tab yang tersedia
     2. Masukkan parameter reaksi
     3. Aplikasi akan memberikan rekomendasi indikator
-    4. Perhatikan kondisi analisis yang disarankan
     """)
     
-    st.header("Tips Penting")
+    st.header("Cara Mengatasi Error")
     st.markdown("""
-    - Pastikan indikator bekerja pada rentang pH titik ekuivalen
-    - Gunakan indikator secukupnya (terlalu banyak dapat mengganggu)
-    - Untuk titrasi dengan perubahan warna sulit diamati, pertimbangkan pH meter
-    - Kalibrasi larutan titran secara berkala
-    """)
+    Jika muncul error tentang modul yang tidak ditemukan:
+    1. Pastikan semua dependensi terinstall:
+    bash
+    pip install streamlit numpy
     
-    st.header("Tentang")
-    st.markdown("""
-    Aplikasi ini dikembangkan untuk membantu praktikum kimia analitik.
+    2. Untuk versi lengkap dengan visualisasi:
+    bash
+    pip install matplotlib
     
-    *Versi*: 2.0  
-    *Developer*: [Nama Anda]  
-    *Institut*: [Nama Institusi]
     """)
