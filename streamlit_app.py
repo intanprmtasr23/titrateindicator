@@ -4,22 +4,25 @@ from PIL import Image
 import io
 
 # Konfigurasi latar belakang dengan gambar titrasi
+
 def set_bg_hack(main_bg):
     main_bg_ext = "png"
-    
+    with open(main_bg, "rb") as f:
+        base64_img = base64.b64encode(f.read()).decode()
+
     st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read().decode()});
-             background-size: cover;
-             background-repeat: no-repeat;
-             background-attachment: fixed;
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+        f"""
+        <style>
+        .stApp {{
+            background: url(data:image/{main_bg_ext};base64,{base64_img});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Panggil fungsi untuk mengatur latar belakang (pastikan file 'titration_bg.png' ada di direktori yang sama)
 try:
