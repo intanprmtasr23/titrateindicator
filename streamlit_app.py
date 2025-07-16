@@ -1,5 +1,5 @@
 import streamlit as st
-import matplotlib.pyplot as st
+import matplotlib.pyplot as plt
 import numpy as np
 
 # Konfigurasi halaman
@@ -84,7 +84,7 @@ with tab1:  # Titrasi Asam-Basa
     
     # Visualisasi
     st.subheader("Visualisasi Rentang pH Indikator")
-    fig, ax = st.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(10, 6))
     
     # Plot garis pH
     ax.axvline(x=pH_eq, color='red', linestyle='--', label=f'pH Ekuivalen ({pH_eq:.1f})')
