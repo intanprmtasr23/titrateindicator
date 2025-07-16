@@ -6,7 +6,7 @@ import io
 # Konfigurasi latar belakang dengan gambar titrasi
 
 def set_bg_hack(main_bg):
-    main_bg_ext = "png"
+    main_bg_ext = "jpg"
     with open(main_bg, "rb") as f:
         base64_img = base64.b64encode(f.read()).decode()
 
