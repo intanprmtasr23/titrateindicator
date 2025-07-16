@@ -6,7 +6,7 @@ import io
 # Konfigurasi latar belakang dengan gambar titrasi
 
 def set_bg_hack(main_bg):
-    main_bg_ext = "jpg"
+    main_bg_ext = "png"
     with open(main_bg, "rb") as f:
         base64_img = base64.b64encode(f.read()).decode()
 
@@ -26,9 +26,7 @@ def set_bg_hack(main_bg):
 
 # Panggil fungsi untuk mengatur latar belakang (pastikan file 'titration_bg.png' ada di direktori yang sama)
 try:
-
-
-    set_bg_hack("titration,jpg")
+    set_bg_hack("titration_bg.png")
 except:
     st.warning("Gambar latar belakang tidak ditemukan, menggunakan latar putih default")
 
@@ -129,9 +127,9 @@ with tab1:  # Titrasi Asam-Basa
         st.write(f"Indikator yang sesuai untuk pH titik ekuivalen {pH_eq:.1f}:")
         for name, low, high, change, app in rec_indicators:
             with st.expander(f"{name}: pH {low}-{high} ({change})"):
-                st.write(f"*Perubahan Warna*: {change}")
-                st.write(f"*Aplikasi Khas*: {app}")
-                st.write(f"*Rentang pH*: {low} - {high}")
+                st.write(f"Perubahan Warna: {change}")
+                st.write(f"Aplikasi Khas: {app}")
+                st.write(f"Rentang pH: {low} - {high}")
     else:
         st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
 
@@ -151,14 +149,14 @@ with tab2:  # Titrasi Redoks
     if metode_redoks == "Permanganometri":
         st.markdown("""
         ### Permanganometri (Menggunakan KMnO₄)
-        - *Indikator*: Tidak diperlukan, KMnO₄ berfungsi sebagai indikator sendiri
-        - *Perubahan warna*: 
+        - Indikator: Tidak diperlukan, KMnO₄ berfungsi sebagai indikator sendiri
+        - Perubahan warna: 
           - Dari ungu (MnO₄⁻) ke tak berwarna (Mn²⁺) dalam suasana asam
           - Dari ungu ke coklat (MnO₂) dalam suasana netral/basa
-        - *Kondisi Optimal*:
+        - Kondisi Optimal:
           - Suasana asam kuat (H₂SO₄)
           - Suhu 60-70°C untuk beberapa analit
-        - *Aplikasi*: 
+        - Aplikasi: 
           - Penentuan Fe²⁺ 
           - Analisis H₂O₂
           - Penentuan oksalat
@@ -167,14 +165,14 @@ with tab2:  # Titrasi Redoks
     elif metode_redoks == "Iodometri":
         st.markdown("""
         ### Iodometri/Iodimetri
-        - *Indikator*: Larutan kanji 1%
-        - *Perubahan warna*: 
+        - Indikator: Larutan kanji 1%
+        - Perubahan warna: 
           - Tak berwarna ke biru tua (kompleks I₂-kanji)
-        - *Kondisi Optimal*:
+        - Kondisi Optimal:
           - pH netral hingga sedikit asam
           - Hindari cahaya langsung
           - Titrasi pada suhu ruang
-        - *Aplikasi*: 
+        - Aplikasi: 
           - Penentuan Cu²⁺
           - Analisis klorin
           - Penentuan sulfit
@@ -196,76 +194,76 @@ with tab3:  # Titrasi Kompleksometri
     if ion_logam == "Ca²⁺/Mg²⁺":
         st.markdown("""
         ### Penentuan Kesadahan Air (Ca²⁺ dan Mg²⁺)
-        - *Indikator*: 
+        - Indikator: 
           1. Eriochrome Black T (EBT)
             - Perubahan warna: Merah anggur ke biru
             - Kondisi: pH 10 (buffer NH₃/NH₄Cl)
           2. Calmagite
             - Perubahan warna: Merah ke biru
             - Kondisi: pH 10, lebih stabil dari EBT
-        - *Titran*: EDTA 0.01 M
-        - *Aplikasi*: Analisis kesadahan air
+        - Titran: EDTA 0.01 M
+        - Aplikasi: Analisis kesadahan air
         """)
         
     elif ion_logam == "Zn²⁺":
         st.markdown("""
         ### Penentuan Zn²⁺
-        - *Indikator*: 
+        - Indikator: 
           1. Eriochrome Black T (EBT)
             - Perubahan warna: Merah anggur ke biru
             - Kondisi: pH 10
           2. Xylenol Orange
             - Perubahan warna: Merah ke kuning
             - Kondisi: pH 5-6 (buffer asetat)
-        - *Aplikasi*: Analisis seng dalam preparat farmasi
+        - Aplikasi: Analisis seng dalam preparat farmasi
         """)
         
     elif ion_logam == "Cu²⁺":
         st.markdown("""
         ### Penentuan Cu²⁺
-        - *Indikator*: 
+        - Indikator: 
           1. PAN [1-(2-Piridilazo)-2-naftol]
             - Perubahan warna: Kuning ke merah
             - Kondisi: pH 2-3 (asam nitrat)
           2. Murexide
             - Perubahan warna: Kuning ke ungu
             - Kondisi: pH 9 (buffer amonia)
-        - *Aplikasi*: Analisis tembaga dalam paduan logam
+        - Aplikasi: Analisis tembaga dalam paduan logam
         """)
         
     elif ion_logam == "Fe³⁺":
         st.markdown("""
         ### Penentuan Fe³⁺
-        - *Indikator*: Sulfosalicylic acid
-        - *Perubahan warna*: Ungu ke kuning
-        - *Kondisi*: pH 1.5-3.0, suhu 50-60°C
-        - *Aplikasi*: Analisis besi dalam bijih mineral
+        - Indikator: Sulfosalicylic acid
+        - Perubahan warna: Ungu ke kuning
+        - Kondisi: pH 1.5-3.0, suhu 50-60°C
+        - Aplikasi: Analisis besi dalam bijih mineral
         """)
         
     elif ion_logam in ["Pb²⁺", "Hg²⁺"]:
         st.markdown(f"""
         ### Penentuan {ion_logam}
-        - *Indikator utama*: 
+        - Indikator utama: 
           1. Xylenol Orange
             - Perubahan warna: Merah ke kuning
             - Kondisi: pH 3-6 (buffer asetat)
           2. Dithizone (untuk Hg²⁺)
             - Perubahan warna: Hijau ke merah
             - Kondisi: pH <2 (asam kuat)
-        - *Aplikasi*: Analisis logam berat dalam sampel lingkungan
+        - Aplikasi: Analisis logam berat dalam sampel lingkungan
         """)
         
     else:  # Al³⁺, Ni²⁺, Co²⁺
         st.markdown(f"""
         ### Penentuan {ion_logam}
-        - *Indikator umum*: 
+        - Indikator umum: 
           1. Pyrocatechol Violet
             - Perubahan warna: Biru ke kuning
             - Kondisi: pH 4-6
           2. Eriochrome Cyanine R
             - Perubahan warna: Merah ke biru
             - Kondisi: pH 6-8
-        - *Aplikasi*: Analisis logam dalam paduan dan mineral
+        - Aplikasi: Analisis logam dalam paduan dan mineral
         """)
 
 with tab4:  # Titrasi Pengendapan
@@ -284,13 +282,13 @@ with tab4:  # Titrasi Pengendapan
     if metode_pengendapan == "Argentometri (Mohr)":
         st.markdown("""
         ### Metode Mohr (Penentuan Klorida)
-        - *Indikator*: Ion kromat (CrO₄²⁻) 5%
-        - *Perubahan warna*: Kuning ke merah bata (Ag₂CrO₄)
-        - *Kondisi Optimal*:
+        - Indikator: Ion kromat (CrO₄²⁻) 5%
+        - Perubahan warna: Kuning ke merah bata (Ag₂CrO₄)
+        - Kondisi Optimal:
           - pH netral/sedikit basa (6.5-9.0)
           - Tidak boleh ada amonia
           - Suhu ruang
-        - *Aplikasi*: 
+        - Aplikasi: 
           - Penentuan Cl⁻ dalam air minum
           - Analisis Br⁻ (tidak untuk I⁻ atau SCN⁻)
         """)
@@ -298,13 +296,13 @@ with tab4:  # Titrasi Pengendapan
     elif metode_pengendapan == "Argentometri (Volhard)":
         st.markdown("""
         ### Metode Volhard (Penentuan Halida Tidak Langsung)
-        - *Indikator*: Ion besi(III) (Fe³⁺) sebagai FeNH₄(SO₄)₂
-        - *Perubahan warna*: Tak berwarna ke merah (FeSCN²⁺)
-        - *Kondisi Optimal*:
+        - Indikator: Ion besi(III) (Fe³⁺) sebagai FeNH₄(SO₄)₂
+        - Perubahan warna: Tak berwarna ke merah (FeSCN²⁺)
+        - Kondisi Optimal:
           - Suasana asam nitrat pekat
           - Titrasi balik dengan SCN⁻
           - Hindari cahaya langsung
-        - *Aplikasi*: 
+        - Aplikasi: 
           - Penentuan Cl⁻, Br⁻, I⁻, SCN⁻
           - Analisis perak dalam paduan
         """)
@@ -312,16 +310,16 @@ with tab4:  # Titrasi Pengendapan
     elif metode_pengendapan == "Argentometri (Fajans)":
         st.markdown("""
         ### Metode Fajans (Indikator Adsorpsi)
-        - *Indikator*: 
+        - Indikator: 
           1. Fluorescein
             - Perubahan warna: Hijau kekuningan ke merah muda
           2. Dichlorofluorescein
             - Perubahan warna: Kuning ke merah muda
-        - *Kondisi Optimal*:
+        - Kondisi Optimal:
           - pH sesuai indikator (5-9)
           - Partikel koloid harus terbentuk
           - Pengadukan konstan
-        - *Aplikasi*: 
+        - Aplikasi: 
           - Penentuan halida dengan endpoint adsorpsi
           - Analisis dengan presisi tinggi
         """)
@@ -361,8 +359,8 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    *Versi*: 3.0  
-    *Developer*: Kimia Analitik Digital  
-    *Lisensi*: MIT Open Source  
-    *Untuk*: Praktikum Kimia Analitik
+    Versi: 3.0  
+    Developer: Kimia Analitik Digital  
+    Lisensi: MIT Open Source  
+    Untuk: Praktikum Kimia Analitik
     """)
