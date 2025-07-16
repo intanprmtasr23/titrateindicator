@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
-def main():
+def stream_data ():
     st.title("Pemilihan Indikator Titrasi")
     st.write("Aplikasi ini membantu memilih indikator yang sesuai untuk berbagai jenis titrasi.")
     
@@ -205,7 +205,7 @@ def main():
     """)
 
 if _name_ == "_main_":
-    main()
+   stream_data()
 
 
 
