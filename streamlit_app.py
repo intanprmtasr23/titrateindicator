@@ -26,7 +26,9 @@ def set_bg_hack(main_bg):
 
 # Panggil fungsi untuk mengatur latar belakang (pastikan file 'titration_bg.png' ada di direktori yang sama)
 try:
-    set_bg_hack("titration_bg.png")
+
+
+    set_bg_hack("titration,jpg")
 except:
     st.warning("Gambar latar belakang tidak ditemukan, menggunakan latar putih default")
 
