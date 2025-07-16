@@ -14,7 +14,7 @@ st.markdown("---")
 st.sidebar.header("Pengaturan Awal")
 initial_volume_acid = st.sidebar.slider(
     "Volume Asam Awal (mL)",
-    min_value=10, max_value=200, value=50, step=10
+    min_value=10, max_value=10, value=10, step=6
 )
 initial_concentration_acid = st.sidebar.slider(
     "Konsentrasi Asam Awal (M)",
