@@ -86,7 +86,7 @@ with tab2:  # Titrasi Redoks
     
     metode_redoks = st.selectbox(
         "Pilih Metode Titrasi Redoks",
-        ["Permanganometri", "Iodometri"]
+        ["Permanganometri", "Iodometri", "Dikromatometri", "Serimetri", "Bromatometri"],
         key="metode_redoks"
     )
     
