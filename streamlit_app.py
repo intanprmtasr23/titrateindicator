@@ -29,8 +29,6 @@ set_bg_from_drive(file_id)
 
 st.title("Contoh Background dari Google Drive")
 st.write("Jika kamu melihat latar belakang, berarti berhasil!")
-
-
 # -------------------------------
 # Konten Aplikasi
 # -------------------------------
