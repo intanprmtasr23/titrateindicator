@@ -26,9 +26,11 @@ def set_bg_hack(main_bg):
 
 # Panggil fungsi untuk mengatur latar belakang (pastikan file 'titration_bg.png' ada di direktori yang sama)
 try:
-    set_bg_hack("titration_bg.png")
-except:
-    st.warning("Gambar latar belakang tidak ditemukan, menggunakan latar putih default")
+    set_bg_hack("https://www.google.com/url?sa=i&url=https%3A%2F%2Fjogja.tribunnews.com%2F2023%2F10%2F23%2Fmateri-kimia-kelas-11-apa-itu-titrasi-asam-basa%3Fpage%3Dall&psig=AOvVaw29z3kBUoI6Ai6D9H7oYAuL&ust=1752828330000000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJjzsonBw44DFQAAAAAdAAAAABAE")
+except Exception as e:
+    # Error handling tambahan jika ada masalah lain saat mengatur background
+    st.error(f"Terjadi kesalahan saat mengatur latar belakang: {e}")
+    st.warning("Menggunakan latar putih default.")
 
 # CSS untuk mempercantik tampilan
 st.markdown("""
