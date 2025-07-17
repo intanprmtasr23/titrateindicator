@@ -365,21 +365,26 @@ with st.sidebar:
 
 import streamlit as st
 
-st.title("Kelompok 8")
+# Judul aplikasi
+st.title("Aplikasi Edukasi Titrasi")
+st.write("""
+Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. 
+Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui antarmuka yang user-friendly.
+""")
 
-st.subheader("Daftar Anggota Kelompok 8:")
+# (Tambahkan konten atau fitur utama aplikasi di sini jika ada)
 
-# Data anggota
-anggota = [
-    {"nama": "Afsha Zahira Riyandi", "nim": "2460311"},
-    {"nama": "Intan Permata Sari", "nim": "2460391"},
-    {"nama": "Muhammad Rayhan", "nim": "2460443"},
-    {"nama": "Ramdan Abdul Azis", "nim": "2460490"},
-    {"nama": "Yohanna Angelica Lumbanbatu", "nim": "2460539"}
-]
+# Garis pemisah
+st.markdown("---")
 
-# Tampilkan tabel
-st.table([
-    {"No": i + 1, "Nama": anggota[i]["nama"], "NIM": anggota[i]["nim"]}
-    for i in range(len(anggota))
-])
+# Nama kelompok di bagian bawah
+st.subheader("Kelompok 8")
+st.markdown("""
+**Daftar Anggota:**
+
+1. Afsha Zahira Riyandi – 2460311  
+2. Intan Permata Sari – 2460391  
+3. Muhammad Rayhan – 2460443  
+4. Ramdan Abdul Azis – 2460490  
+5. Yohanna Angelica Lumbanbatu – 2460539
+""")
