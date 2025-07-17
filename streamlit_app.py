@@ -367,7 +367,6 @@ with st.sidebar:
     2. Intan Permata Sari (2460391)
     3. Muhammad Rayhan (2460443)
     4. Ramdan Abdul Azis (2460490)
-    5. Yohana Angelica Lumbanbatu (2460539)
     
      st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px; margin-top: 10px;">
