@@ -362,14 +362,15 @@ with st.sidebar:
     Lisensi: MIT Open Source  
     lingkup : Praktikum Kimia Analitik
     """)
-    import streamlit as st
 
-    st.title("Kelompok 8")
+import streamlit as st
 
-    st.subheader("Daftar Anggota Kelompok 8:")
+st.title("Kelompok 8")
 
-    # Data anggota
-     anggota = [
+st.subheader("Daftar Anggota Kelompok 8:")
+
+# Data anggota
+anggota = [
     {"nama": "Afsha Zahira Riyandi", "nim": "2460311"},
     {"nama": "Intan Permata Sari", "nim": "2460391"},
     {"nama": "Muhammad Rayhan", "nim": "2460443"},
