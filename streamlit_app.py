@@ -62,7 +62,7 @@ def set_background_from_file(image_file):
 # Fungsi background Google Drive
 # ========================
 def set_background_from_gdrive(file_id):
-    image_url = f"https://drive.google.com/uc?export=view&id={file_id}"
+    image_url = f"https://drive.google.com/file/d/1VeDJMXcCjt5RNg0oXenfdEYLr_O-swRm/view?usp=drive_link={file_id}"
     st.markdown(
         f"""
         <style>
