@@ -1,33 +1,3 @@
-import streamlit as st
-import base64
-import requests
-
-def set_bg_from_drive(file_id):
-    url = f"https://drive.google.com/uc?export=download&id={file_id}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        encoded = base64.b64encode(response.content).decode()
-        st.markdown(
-            f"""
-            <style>
-            .stApp {{
-                background-image: url("data:image/png;base64,{encoded}");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-            }}
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-    else:
-        st.error("Gagal mengambil gambar dari Google Drive.")
-
-# Masukkan file ID di sini:
-file_id = "1tq5WqVASGOSqqGKWOziSZNBlUjT3ST0e"
-set_bg_from_drive(file_id)
-
-
 # CSS untuk mempercantik tampilan
 st.markdown("""
 <style>
@@ -37,16 +7,16 @@ div[data-testid="stExpander"] div[role="button"] p {
     color: #2a3f5f;
 }
 .css-1aumxhk {
-    background-color: rgba(200,200,200,0.10);
-    border-radius: 5px;
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
 }
 </style>
 """, unsafe_allow_html=True)
 
 # Judul aplikasi dengan style
 st.markdown("""
-<div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+<div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px;">
     <h1 style="color: #2a3f5f; text-align: center;">🧪 Aplikasi Pemilihan Indikator Titrasi</h1>
     <p style="text-align: center;">Pilih indikator yang sesuai untuk berbagai jenis titrasi analitik</p>
 </div>
@@ -62,7 +32,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0,8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -133,7 +103,7 @@ with tab1:  # Titrasi Asam-Basa
 
 with tab2:  # Titrasi Redoks
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -178,7 +148,7 @@ with tab2:  # Titrasi Redoks
 
 with tab3:  # Titrasi Kompleksometri
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -266,7 +236,7 @@ with tab3:  # Titrasi Kompleksometri
 
 with tab4:  # Titrasi Pengendapan
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -325,7 +295,7 @@ with tab4:  # Titrasi Pengendapan
 # Sidebar dengan informasi tambahan
 with st.sidebar:
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 15px;">
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
         <h3 style="color: #2a3f5f;">Panduan Penggunaan</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -338,7 +308,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px; margin-top: 10px;">
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px; margin-top: 20px;">
         <h3 style="color: #2a3f5f;">Tips Penting</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -351,18 +321,14 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px; margin-top: 10px;">
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px; margin-top: 20px;">
         <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
     Versi: 3.0  
-    Pembuat web : Kelompok 8  
-    lingkup Web : Praktikum Kimia Analitik
-    
-    
-   
-    
-    
-    
+    Developer: Kimia Analitik Digital  
+    Lisensi: MIT Open Source  
+    Untuk: Praktikum Kimia Analitik
+    """)
