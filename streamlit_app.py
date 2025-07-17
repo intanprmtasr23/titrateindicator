@@ -37,8 +37,8 @@ div[data-testid="stExpander"] div[role="button"] p {
     color: #2a3f5f;
 }
 .css-1aumxhk {
-    background-color: rgba(600,600,600,0.8);
-    border-radius: 25px;
+    background-color: rgba(500,500,500,0.8);
+    border-radius: 20px;
     padding: 20px;
 }
 </style>
