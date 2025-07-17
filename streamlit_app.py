@@ -37,7 +37,7 @@ div[data-testid="stExpander"] div[role="button"] p {
     color: #2a3f5f;
 }
 .css-1aumxhk {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(200, 200, 200, 0.8);
     border-radius: 10px;
     padding: 20px;
 }
@@ -46,7 +46,7 @@ div[data-testid="stExpander"] div[role="button"] p {
 
 # Judul aplikasi dengan style
 st.markdown("""
-<div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px;">
+<div style="background-color: rgba(200, 200, 200, 0.8); padding: 20px; border-radius: 10px;">
     <h1 style="color: #2a3f5f; text-align: center;">🧪 Aplikasi Pemilihan Indikator Titrasi</h1>
     <p style="text-align: center;">Pilih indikator yang sesuai untuk berbagai jenis titrasi analitik</p>
 </div>
@@ -62,7 +62,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
+    <div style="background-color: rgba(200, 200, 200, 0.8); padding: 15px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
     </div>
     """, unsafe_allow_html=True)
