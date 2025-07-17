@@ -2,10 +2,7 @@ import streamlit as st
 import base64
 import requests
 
-# -------------------------------
-# Fungsi untuk mengatur background dari Google Drive
-# -------------------------------
-ef set_bg_from_drive(file_id):
+def set_bg_from_drive(file_id):
     url = f"https://drive.google.com/uc?export=download&id={file_id}"
     response = requests.get(url)
     if response.status_code == 200:
@@ -32,6 +29,7 @@ set_bg_from_drive(file_id)
 
 st.title("Contoh Background dari Google Drive")
 st.write("Jika kamu melihat latar belakang, berarti berhasil!")
+
 
 # -------------------------------
 # Konten Aplikasi
