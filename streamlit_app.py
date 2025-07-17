@@ -27,8 +27,6 @@ def set_bg_from_drive(file_id):
 file_id = "1tq5WqVASGOSqqGKWOziSZNBlUjT3ST0e"
 set_bg_from_drive(file_id)
 
-st.title("Contoh Background dari Google Drive")
-st.write("Jika kamu melihat latar belakang, berarti berhasil!")
 
 # CSS untuk mempercantik tampilan
 st.markdown("""
