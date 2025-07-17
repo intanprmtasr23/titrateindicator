@@ -380,11 +380,11 @@ st.markdown("---")
 # Nama kelompok di bagian bawah
 st.subheader("Kelompok 8")
 st.markdown("""
-**Daftar Anggota:**
+**Nama Anggota:**
 
 1. Afsha Zahira Riyandi – 2460311  
 2. Intan Permata Sari – 2460391  
 3. Muhammad Rayhan – 2460443  
 4. Ramdan Abdul Azis – 2460490  
-5. Yohanna Angelica Lumbanbatu – 2460539
+5. Yohana Angelica Lumbanbatu – 2460539
 """)
