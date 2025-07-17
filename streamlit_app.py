@@ -24,7 +24,7 @@ def set_bg_from_drive(file_id):
         st.error("Gagal mengambil gambar dari Google Drive.")
 
 # Masukkan file ID di sini:
-file_id = "1tq5WqVASGOSqqGKWOziSZNBlUjT3ST0e"
+file_id = "15NKq1gAqRqdIci9DJ0B2UW6VzXpHQVOA"
 set_bg_from_drive(file_id)
 
 
