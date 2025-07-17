@@ -365,6 +365,4 @@ with st.sidebar:
     lingkup : Praktikum Kimia Analitik
     """)
     
-     st.markdown("""
-    Dibuat oleh kelompok 8 Logika dan Pemrograman Komputer
-    1.
+    
