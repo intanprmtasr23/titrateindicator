@@ -368,11 +368,7 @@ with st.sidebar:
     3. Muhammad Rayhan (2460443)
     4. Ramdan Abdul Azis (2460490)
     
-     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px; margin-top: 10px;">
-        <h3 style="color: #2a3f5f;">Tips Penting</h3>
-    </div>
-    """, unsafe_allow_html=True)
+   
     
     
     
