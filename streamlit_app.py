@@ -362,3 +362,23 @@ with st.sidebar:
     Lisensi: MIT Open Source  
     lingkup : Praktikum Kimia Analitik
     """)
+    import streamlit as st
+
+    st.title("Kelompok 8")
+
+    st.subheader("Daftar Anggota Kelompok 8:")
+
+    # Data anggota
+     anggota = [
+    {"nama": "Afsha Zahira Riyandi", "nim": "2460311"},
+    {"nama": "Intan Permata Sari", "nim": "2460391"},
+    {"nama": "Muhammad Rayhan", "nim": "2460443"},
+    {"nama": "Ramdan Abdul Azis", "nim": "2460490"},
+    {"nama": "Yohanna Angelica Lumbanbatu", "nim": "2460539"}
+]
+
+# Tampilkan tabel
+st.table([
+    {"No": i + 1, "Nama": anggota[i]["nama"], "NIM": anggota[i]["nim"]}
+    for i in range(len(anggota))
+])
