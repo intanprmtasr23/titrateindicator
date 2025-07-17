@@ -5,20 +5,16 @@ import requests
 # -------------------------------
 # Fungsi untuk mengatur background dari Google Drive
 # -------------------------------
-def set_background_from_drive(file_id):
-    # Format URL unduhan langsung
-    image_url = f"https://drive.google.com/uc?export=download&id=FILE_ID,{file_id}");
-    
-    # Ambil gambar dan ubah jadi base64
-    response = requests.get(image_url)
+ef set_bg_from_drive(file_id):
+    url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    response = requests.get(url)
     if response.status_code == 200:
-        base64_img = base64.b64encode(response.content).decode()
-        # Tambahkan CSS background
+        encoded = base64.b64encode(response.content).decode()
         st.markdown(
             f"""
             <style>
             .stApp {{
-                background-image: url("data:image/png;base64,{base64_img}");
+                background-image: url("data:image/png;base64,{encoded}");
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -28,13 +24,14 @@ def set_background_from_drive(file_id):
             unsafe_allow_html=True
         )
     else:
-        st.warning("Gagal memuat gambar dari Google Drive.")
+        st.error("Gagal mengambil gambar dari Google Drive.")
 
-# -------------------------------
-# Atur background dari link Google Drive
-# -------------------------------
-file_id = "1mnLK1ZrJsoMkw9LTw8sXLzi9swazm2_H"
-set_background_from_drive(file_id)
+# Masukkan file ID di sini:
+file_id = "1tq5WqVASGOSqqGKWOziSZNBlUjT3ST0e"
+set_bg_from_drive(file_id)
+
+st.title("Contoh Background dari Google Drive")
+st.write("Jika kamu melihat latar belakang, berarti berhasil!")
 
 # -------------------------------
 # Konten Aplikasi
