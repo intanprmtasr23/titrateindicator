@@ -7,7 +7,7 @@ import requests
 # -------------------------------
 def set_background_from_drive(file_id):
     # Format URL unduhan langsung
-    image_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    image_url = f"https://drive.google.com/file/d/1tq5WqVASGOSqqGKWOziSZNBlUjT3ST0e/view?usp=sharing={file_id}"
     
     # Ambil gambar dan ubah jadi base64
     response = requests.get(image_url)
@@ -371,5 +371,9 @@ with st.sidebar:
     Versi: 3.0  
     Developer: Kimia Analitik Digital  
     Lisensi: MIT Open Source  
-    Untuk: Praktikum Kimia Analitik
+    lingkup : Praktikum Kimia Analitik
     """)
+    
+     st.markdown("""
+    Dibuat oleh kelompok 8 Logika dan Pemrograman Komputer
+    1.
