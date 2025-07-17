@@ -388,3 +388,13 @@ st.markdown("""
 4. Ramdan Abdul Azis – 2460490  
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
+
+import streamlit as st
+
+st.title("Contoh Ketebalan Teks")
+
+st.markdown('<p style="font-weight:400;">Teks normal (400)</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-weight:600;">Teks agak tebal (600)</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-weight:700;">Teks bold (700)</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-weight:900;">Teks sangat tebal (900)</p>', unsafe_allow_html=True)
+
