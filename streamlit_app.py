@@ -361,12 +361,6 @@ with st.sidebar:
     Pembuat web : Kelompok 8  
     lingkup Web : Praktikum Kimia Analitik
     
-    st.markdown("""
-    Nama Kelompok 8
-    1. Afsha Zahira Riyandi (2460311)
-    2. Intan Permata Sari (2460391)
-    3. Muhammad Rayhan (2460443)
-    4. Ramdan Abdul Azis (2460490)
     
    
     
