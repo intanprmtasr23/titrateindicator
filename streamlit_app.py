@@ -46,7 +46,7 @@ div[data-testid="stExpander"] div[role="button"] p {
 
 # Judul aplikasi dengan style
 st.markdown("""
-<div style="background-color: rgba(200, 200, 200, 0.8); padding: 20px; border-radius: 10px;">
+<div style="background-color: rgba(100, 100, 100, 0.5); padding: 10px; border-radius: 5px;">
     <h1 style="color: #2a3f5f; text-align: center;">🧪 Aplikasi Pemilihan Indikator Titrasi</h1>
     <p style="text-align: center;">Pilih indikator yang sesuai untuk berbagai jenis titrasi analitik</p>
 </div>
@@ -133,7 +133,7 @@ with tab1:  # Titrasi Asam-Basa
 
 with tab2:  # Titrasi Redoks
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
+    <div style="background-color: rgba(100, 100, 100, 0.5); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -178,7 +178,7 @@ with tab2:  # Titrasi Redoks
 
 with tab3:  # Titrasi Kompleksometri
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px;">
+    <div style="background-color: rgba(100, 100,100, 0.5); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -351,7 +351,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 15px; border-radius: 10px; margin-top: 20px;">
+    <div style="background-color: rgba(100, 100,100, 0.5); padding: 15px; border-radius: 10px; margin-top: 20px;">
         <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
     </div>
     """, unsafe_allow_html=True)
