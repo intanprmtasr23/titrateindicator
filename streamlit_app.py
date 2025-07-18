@@ -357,7 +357,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    Developer: Kimia Analitik Digital  
+    Developer: Kelompok 8  
     lingkup : Praktikum Kimia Analitik
     """)
 
