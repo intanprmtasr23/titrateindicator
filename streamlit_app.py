@@ -239,35 +239,51 @@ with tab2:  # Titrasi Redoks
     
     if metode_redoks == "Permanganometri":
         st.markdown("""
-        ### Permanganometri (Menggunakan KMnO₄)
-        - Indikator: Tidak diperlukan, KMnO₄ berfungsi sebagai indikator sendiri
-        - Perubahan warna: 
-          - Dari ungu (MnO₄⁻) ke tak berwarna (Mn²⁺) dalam suasana asam
-          - Dari ungu ke coklat (MnO₂) dalam suasana netral/basa
-        - Kondisi Optimal:
-          - Suasana asam kuat (H₂SO₄)
-          - Suhu 60-70°C untuk beberapa analit
-        - Aplikasi: 
-          - Penentuan Fe²⁺
-          - Analisis H₂O₂
-          - Penentuan oksalat
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Permanganometri (Menggunakan KMnO₄)</h3>
+            <p style="color: #333333;"><b>- Indikator:</b> Tidak diperlukan, KMnO₄ berfungsi sebagai indikator sendiri</p>
+            <p style="color: #333333;"><b>- Perubahan warna:</b></p>
+            <ul style="color: #333333;">
+              <li>Dari ungu (MnO₄⁻) ke tak berwarna (Mn²⁺) dalam suasana asam</li>
+              <li>Dari ungu ke coklat (MnO₂) dalam suasana netral/basa</li>
+            </ul>
+            <p style="color: #333333;"><b>- Kondisi Optimal:</b></p>
+            <ul style="color: #333333;">
+              <li>Suasana asam kuat (H₂SO₄)</li>
+              <li>Suhu 60-70°C untuk beberapa analit</li>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b></p>
+            <ul style="color: #333333;">
+              <li>Penentuan Fe²⁺</li>
+              <li>Analisis H₂O₂</li>
+              <li>Penentuan oksalat</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
         
     elif metode_redoks == "Iodometri":
         st.markdown("""
-        ### Iodometri/Iodimetri
-        - Indikator: Larutan kanji 1%
-        - Perubahan warna: 
-          - Tak berwarna ke biru tua (kompleks I₂-kanji)
-        - Kondisi Optimal:
-          - pH netral hingga sedikit asam
-          - Hindari cahaya langsung
-          - Titrasi pada suhu ruang
-        - Aplikasi: 
-          - Penentuan Cu²⁺
-          - Analisis klorin
-          - Penentuan sulfit
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Iodometri/Iodimetri</h3>
+            <p style="color: #333333;"><b>- Indikator:</b> Larutan kanji 1%</p>
+            <p style="color: #333333;"><b>- Perubahan warna:</b></p>
+            <ul style="color: #333333;">
+              <li>Tak berwarna ke biru tua (kompleks I₂-kanji)</li>
+            </ul>
+            <p style="color: #333333;"><b>- Kondisi Optimal:</b></p>
+            <ul style="color: #333333;">
+              <li>pH netral hingga sedikit asam</li>
+              <li>Hindari cahaya langsung</li>
+              <li>Titrasi pada suhu ruang</li>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b></p>
+            <ul style="color: #333333;">
+              <li>Penentuan Cu²⁺</li>
+              <li>Analisis klorin</li>
+              <li>Penentuan sulfit</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
     
     st.markdown("</div>", unsafe_allow_html=True) # End div for tab content
 
