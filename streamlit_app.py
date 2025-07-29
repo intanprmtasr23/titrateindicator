@@ -405,3 +405,23 @@ st.markdown("""
 4. Ramdan Abdul Azis – 2460490  
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
+
+# Tambahkan di awal tab atau halaman tempat kamu ingin gaya ini berlaku
+st.markdown("""
+    <style>
+    .custom-box {
+        background-color: rgba(255, 255, 255, 0.95);  /* Atur transparansi: 1 = solid putih, 0 = transparan */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        margin-bottom: 25px;
+    }
+    .custom-text {
+        color: #000000; /* warna teks hitam */
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
