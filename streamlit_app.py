@@ -131,8 +131,15 @@ with tab1:  # Titrasi Asam-Basa
         "Alizarin Kuning R": {"rentang": (10.1, 12.0), "perubahan": "Kuning ke Merah", "aplikasi": "Titrasi basa sangat kuat"}
     }
     
-    # Rekomendasi indikator
-    st.subheader("Rekomendasi Indikator")
+   # Rekomendasi Indikator
+st.markdown("""
+    <div class="custom-box">
+        <div class="custom-title">Rekomendasi Indikator</div>
+        <div class="custom-text">
+           
+        </div>
+    </div>
+""", unsafe_allow_html=True)("Rekomendasi Indikator")
     rec_indicators = []
     
     for name, data in indikator_ab.items():
@@ -151,12 +158,15 @@ with tab1:  # Titrasi Asam-Basa
         st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
 
 with tab2:  # Titrasi Redoks
-    st.markdown("""
-    <div class="content-box">
-    <div class="title-bold">Titrasi Redoks</h2>
+   # Rekomendasi Indikator
+st.markdown("""
+    <div class="custom-box">
+        <div class="custom-title">Titrasi Indikator</div>
+        <div class="custom-text">
+           
+        </div>
     </div>
-    """, unsafe_allow_html=True)
-    
+""", unsafe_allow_html=True)
     metode_redoks = st.selectbox(
         "Pilih Metode Titrasi Redoks",
         ["Permanganometri", "Iodometri"],
@@ -423,5 +433,42 @@ st.markdown("""
         line-height: 1.5;
     }
     </style>
+""", unsafe_allow_html=True)
+
+# Judul dan Penjelasan Aplikasi
+st.markdown("""
+    <div class="custom-box">
+        <div class="custom-title">Aplikasi Edukasi Titrasi</div>
+        <div class="custom-text">
+            Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif.
+            Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui
+            antarmuka yang user-friendly.
+        </div>
+    </div>
+""", unsafe_allow_html=True)
+
+# Rekomendasi Indikator
+st.markdown("""
+    <div class="custom-box">
+        <div class="custom-title">Rekomendasi Indikator</div>
+        <div class="custom-text">
+           
+        </div>
+    </div>
+""", unsafe_allow_html=True)
+
+# Kelompok
+st.markdown("""
+    <div class="custom-box">
+        <div class="custom-title">Kelompok 8</div>
+        <div class="custom-text">
+            Nama Anggota:<br>
+            1. Afsha Zahira Riyandi (2460311)<br>
+            2. Intan Permata Sari (2460391)<br>
+            3. Muhammad Rayhan (2460443)<br>
+            4. Ramdan Abdul Azis (2460490)<br>
+            5. Yohanna Angelica Lumbanbatu (2460503)
+        </div>
+    </div>
 """, unsafe_allow_html=True)
 
