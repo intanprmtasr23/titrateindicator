@@ -175,7 +175,12 @@ with tab1:  # Titrasi Asam-Basa
     }
     
     # Rekomendasi indikator
-    st.subheader("Rekomendasi Indikator")
+    st.markdown("""
+    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="color: #2a3f5f;">Rekomendasi Indikator</h3>
+    </div>
+    """, unsafe_allow_html=True)
+    
     rec_indicators = []
     
     for name, data in indikator_ab.items():
@@ -184,7 +189,11 @@ with tab1:  # Titrasi Asam-Basa
             rec_indicators.append((name, low, high, data["perubahan"], data["aplikasi"]))
     
     if rec_indicators:
-        st.write(f"Indikator yang sesuai untuk pH titik ekuivalen {pH_eq:.1f}:")
+        st.markdown(f"""
+        <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <p style="color: #333333;">Indikator yang sesuai untuk pH titik ekuivalen {pH_eq:.1f}:</p>
+        </div>
+        """, unsafe_allow_html=True)
         for name, low, high, change, app in rec_indicators:
             with st.expander(f"{name}: pH {low}-{high} ({change})"):
                 st.write(f"Perubahan Warna: {change}")
