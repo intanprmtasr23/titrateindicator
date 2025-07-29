@@ -52,6 +52,17 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+    .custom-bg {
+        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Tab untuk berbagai jenis titrasi
 tab1, tab2, tab3, tab4 = st.tabs([
     "Asam-Basa", 
@@ -59,6 +70,17 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "Kompleksometri", 
     "Pengendapan"
 ])
+
+st.markdown("""
+    <style>
+    .custom-bg {
+        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
@@ -178,6 +200,16 @@ with tab1:  # Titrasi Asam-Basa
                 st.write(f"Rentang pH: {low} - {high}")
     else:
         st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
+st.markdown("""
+    <style>
+    .custom-bg {
+        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 with tab2:  # Titrasi Redoks
     st.markdown("""
@@ -223,6 +255,17 @@ with tab2:  # Titrasi Redoks
           - Analisis klorin
           - Penentuan sulfit
         """)
+        
+st.markdown("""
+    <style>
+    .custom-bg {
+        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 with tab3:  # Titrasi Kompleksometri
     st.markdown("""
@@ -335,32 +378,18 @@ with tab3:  # Titrasi Kompleksometri
             - Kondisi: pH 6-8
         - Aplikasi: Analisis logam dalam paduan dan mineral
         """)
-
-with tab4:  # Titrasi Pengendapan
-    st.markdown("""
+st.markdown("""
     <style>
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
-        padding: 20px;
-        border-radius: 12px;
+    .custom-bg {
+        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
+        padding: 15px;
+        border-radius: 10px;
         margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .text-container h1, .text-container h2, .text-container h3 {
-        font-weight: 800;
-        color: #000;
-        text-align: center;
-    }
-    .text-container p {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        text-align: justify;
-        margin: 10px 0;
     }
     </style>
 """, unsafe_allow_html=True)
 
+with tab4:  # Titrasi Pengendapan
     st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
@@ -421,27 +450,15 @@ with tab4:  # Titrasi Pengendapan
 # Sidebar dengan informasi tambahan
 st.markdown("""
     <style>
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
-        padding: 20px;
-        border-radius: 12px;
+    .custom-bg {
+        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
+        padding: 15px;
+        border-radius: 10px;
         margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .text-container h1, .text-container h2, .text-container h3 {
-        font-weight: 800;
-        color: #000;
-        text-align: center;
-    }
-    .text-container p {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        text-align: justify;
-        margin: 10px 0;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 with st.sidebar:
     st.markdown("""
@@ -496,30 +513,6 @@ Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi seder
 st.markdown("---")
 
 # Nama kelompok di bagian bawah
-st.markdown("""
-    <style>
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .text-container h1, .text-container h2, .text-container h3 {
-        font-weight: 800;
-        color: #000;
-        text-align: center;
-    }
-    .text-container p {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        text-align: justify;
-        margin: 10px 0;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 st.subheader("Kelompok 8")
 st.markdown("""
 **Nama Anggota:**
