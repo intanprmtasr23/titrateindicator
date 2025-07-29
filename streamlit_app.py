@@ -514,41 +514,47 @@ with tab4:  # Titrasi Pengendapan
 # Sidebar dengan informasi tambahan
 with st.sidebar:
     st.markdown("""
-    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
-        <h3 style="color: #2a3f5f;">Panduan Penggunaan</h3>
+    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+        <h3 style="color: #333333;">Panduan Penggunaan</h3>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    1. Pilih jenis titrasi dari tab menu
-    2. Tentukan parameter analisis
-    3. Baca rekomendasi indikator
-    4. Perhatikan kondisi optimal untuk setiap metode
-    """)
-    
-    st.markdown("""
-    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
-        <h3 style="color: #2a3f5f;">Tips Penting</h3>
+    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+    <p style="color: #333333;">1. Pilih jenis titrasi dari tab menu</p>
+    <p style="color: #333333;">2. Tentukan parameter analisis</p>
+    <p style="color: #333333;">3. Baca rekomendasi indikator</p>
+    <p style="color: #333333;">4. Perhatikan kondisi optimal untuk setiap metode</p>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    - Kalibrasi larutan titran sebelum digunakan
-    - Gunakan indikator secukupnya (terlalu banyak dapat mengganggu)
-    - Catat perubahan warna dengan cermat
-    - Untuk analisis presisi tinggi, gunakan alat bantu seperti pH meter
-    """)
-    
-    st.markdown("""
-    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
-        <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
+    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+        <h3 style="color: #333333;">Tips Penting</h3>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    Developer: Kelompok 8 
-    Lingkup: Praktikum Kimia Analitik
-    """)
+    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+    <p style="color: #333333;">- Kalibrasi larutan titran sebelum digunakan</p>
+    <p style="color: #333333;">- Gunakan indikator secukupnya (terlalu banyak dapat mengganggu)</p>
+    <p style="color: #333333;">- Catat perubahan warna dengan cermat</p>
+    <p style="color: #333333;">- Untuk analisis presisi tinggi, gunakan alat bantu seperti pH meter</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+        <h3 style="color: #333333;">Tentang Aplikasi</h3>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+    <p style="color: #333333;">Developer: Kelompok 8</p> 
+    <p style="color: #333333;">Lingkup: Praktikum Kimia Analitik</p>
+    </div>
+    """, unsafe_allow_html=True)
  
 # Judul aplikasi di bagian bawah (diperbarui dengan latar belakang putih)
 st.markdown("""
