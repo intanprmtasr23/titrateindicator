@@ -386,6 +386,19 @@ st.markdown("""
 4. Ramdan Abdul Azis – 2460490  
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
+st.markdown("""
+<div class="custom-box">
+    <div class="custom-title">Kelompok 8</div>
+    <p class="custom-text">
+        1. Afsha Zahira Riyandi – 2460311<br>
+        2. Intan Permata Sari – 2460391<br>
+        3. Muhammad Rayhan – 2460443<br>
+        4. Ramdan Abdul Azis – 2460490<br>
+        5. Yohana Angelica Lumbanbatu – 2460539
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
 
 
 
