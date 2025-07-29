@@ -112,6 +112,12 @@ div[style*="background-color: rgba(255, 255, 255, 0.8)"] li {
     font-weight: bold !important;
 }
 
+/* Memastikan angka pada slider menjadi putih dan tebal */
+div[data-testid="stSlider"] .st-bd {
+    color: white !important;
+    font-weight: bold !important;
+}
+
 /* Memastikan teks di dalam st.success dan st.error jelas */
 .stAlert p {
     color: #333333 !important;
