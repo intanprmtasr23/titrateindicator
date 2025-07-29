@@ -422,3 +422,33 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+<div class="content-box">
+    <div class="title-bold">📚 Aplikasi Edukasi Titrasi</div>
+    <p class="text-clear">
+        Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui antarmuka yang user-friendly.
+    </p>
+</div>
+
+<div class="content-box">
+    <div class="title-bold">🎯 Rekomendasi Indikator</div>
+    <p class="text-clear">
+        Indikator yang sesuai untuk pH titik ekuivalen 7.0:<br>
+        <strong>Bromtimol Biru</strong>: pH 6.0–7.6 (Kuning ke Biru)<br>
+        <strong>Fenol Merah</strong>: pH 6.8–8.4 (Kuning ke Merah)
+    </p>
+</div>
+
+<div class="content-box">
+    <div class="title-bold">👥 Kelompok 8</div>
+    <p class="text-clear">
+        <strong>Nama Anggota:</strong><br>
+        Afsha Zahira Riyandi – 2460311<br>
+        Intan Permata Sari – 2460391<br>
+        Muhammad Rayhan – 2460443<br>
+        Ramdan Abdul Azis – 2460490<br>
+        Yohana Angelica Lumbanbatu – 2460539
+    </p>
+</div>
+""", unsafe_allow_html=True)
