@@ -33,6 +33,7 @@ st.markdown("""
 /* Mengatur warna teks untuk semua elemen */
 body, .stApp, .stMarkdown, .stText, .stAlert, .stSelectbox, .stSlider, .stExpander, .stTabs, h1, h2, h3, h4, h5, h6, p, li {
     color: #333333 !important; /* Warna teks lebih gelap untuk kontras */
+    font-weight: bold !important; /* Membuat semua teks tebal */
 }
 
 /* Latar belakang putih untuk area utama konten */
@@ -84,11 +85,13 @@ div[style*="background-color: rgba(255, 255, 255, 0.8)"] h3,
 div[style*="background-color: rgba(255, 255, 255, 0.8)"] p,
 div[style*="background-color: rgba(255, 255, 255, 0.8)"] li {
     color: #2a3f5f !important; /* Warna teks yang jelas untuk judul dan paragraf */
+    font-weight: bold !important; /* Membuat teks tebal */
 }
 
 /* Memastikan teks di dalam tab juga jelas */
 .stTabs [data-testid="stMarkdownContainer"] p {
     color: #333333 !important;
+    font-weight: bold !important; /* Membuat teks tebal */
 }
 
 /* Memastikan teks pada judul tab menjadi putih dan tebal */
@@ -107,6 +110,12 @@ div[style*="background-color: rgba(255, 255, 255, 0.8)"] li {
 .stSelectbox label, .stSlider label {
     color: white !important;
     font-weight: bold !important;
+}
+
+/* Memastikan teks di dalam st.success dan st.error jelas */
+.stAlert p {
+    color: #333333 !important;
+    font-weight: bold !important; /* Membuat teks tebal */
 }
 
 </style>
