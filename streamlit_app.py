@@ -1,3 +1,4 @@
+
 import streamlit as st
 import base64
 import requests
@@ -204,13 +205,13 @@ with tab1:  # Titrasi Asam-Basa
         </div>
         """, unsafe_allow_html=True)
         for name, low, high, change, app in rec_indicators:
-            # Menambahkan latar belakang biru tua dan teks tebal putih untuk setiap indikator yang direkomendasikan
+            # Menambahkan latar belakang biru muda dan teks tebal hitam untuk setiap indikator yang direkomendasikan
             st.markdown(f"""
-            <div style="background-color: rgba(0, 0, 128, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-                <h4 style="color: #FFFFFF; font-weight: bold;">{name}: pH {low}-{high} ({change})</h4>
-                <p style="color: #FFFFFF; font-weight: bold;">Perubahan Warna: {change}</p>
-                <p style="color: #FFFFFF; font-weight: bold;">Aplikasi Khas: {app}</p>
-                <p style="color: #FFFFFF; font-weight: bold;">Rentang pH: {low} - {high}</p>
+            <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                <h4 style="color: #333333; font-weight: bold;">{name}: pH {low}-{high} ({change})</h4>
+                <p style="color: #333333; font-weight: bold;">Perubahan Warna: {change}</p>
+                <p style="color: #333333; font-weight: bold;">Aplikasi Khas: {app}</p>
+                <p style="color: #333333; font-weight: bold;">Rentang pH: {low} - {high}</p>
             </div>
             """, unsafe_allow_html=True)
     else:
