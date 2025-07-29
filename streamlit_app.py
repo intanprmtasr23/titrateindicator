@@ -146,14 +146,22 @@ with tab1:  # Titrasi Asam-Basa
     if ("Asam Kuat" in jenis_titran and "Basa Kuat" in jenis_analit) or \
        ("Basa Kuat" in jenis_titran and "Asam Kuat" in jenis_analit):
         pH_eq = 7.0
-        st.success("Titik ekuivalen pada pH 7.0 (netral)")
+        st.markdown(f"""
+        <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <p style="color: #333333;">Titik ekuivalen pada pH 7.0 (netral)</p>
+        </div>
+        """, unsafe_allow_html=True)
     elif ("Asam Kuat" in jenis_titran and "Basa Lemah" in jenis_analit):
         pH_eq = st.slider("Perkiraan pH titik ekuivalen", 3.0, 6.5, 5.0, 0.1)
     elif ("Basa Kuat" in jenis_titran and "Asam Lemah" in jenis_analit):
         pH_eq = st.slider("Perkiraan pH titik ekuivalen", 7.5, 11.0, 8.5, 0.1)
     else:
         pH_eq = st.slider("Perkiraan pH titik ekuivalen", 3.0, 11.0, 7.0, 0.1)
-        st.warning("Titrasi antara asam lemah dan basa lemah umumnya tidak direkomendasikan")
+        st.markdown(f"""
+        <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <p style="color: #333333;">Titrasi antara asam lemah dan basa lemah umumnya tidak direkomendasikan</p>
+        </div>
+        """, unsafe_allow_html=True)
     
     # Database indikator asam-basa
     indikator_ab = {
@@ -195,12 +203,20 @@ with tab1:  # Titrasi Asam-Basa
         </div>
         """, unsafe_allow_html=True)
         for name, low, high, change, app in rec_indicators:
-            with st.expander(f"{name}: pH {low}-{high} ({change})"):
-                st.write(f"Perubahan Warna: {change}")
-                st.write(f"Aplikasi Khas: {app}")
-                st.write(f"Rentang pH: {low} - {high}")
+            st.markdown(f"""
+            <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                <h4 style="color: #2a3f5f;">{name}: pH {low}-{high} ({change})</h4>
+                <p style="color: #333333;">Perubahan Warna: {change}</p>
+                <p style="color: #333333;">Aplikasi Khas: {app}</p>
+                <p style="color: #333333;">Rentang pH: {low} - {high}</p>
+            </div>
+            """, unsafe_allow_html=True)
     else:
-        st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
+        st.markdown(f"""
+        <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <p style="color: #FF4B4B;">Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.</p>
+        </div>
+        """, unsafe_allow_html=True)
  
 with tab2:  # Titrasi Redoks
     st.markdown("""
