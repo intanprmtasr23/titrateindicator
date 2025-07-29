@@ -325,7 +325,7 @@ with tab4:  # Titrasi Pengendapan
 # Sidebar dengan informasi tambahan
 with st.sidebar:
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div class="content-box">r: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h3 style="color: #2a3f5f;">Panduan Penggunaan</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -338,7 +338,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="content-box": rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tips Penting</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -351,7 +351,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="content-box": rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
     </div>
     """, unsafe_allow_html=True)
