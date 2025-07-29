@@ -386,17 +386,30 @@ st.markdown("""
 4. Ramdan Abdul Azis – 2460490  
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
+
+# Tambahan CSS untuk memperjelas tampilan konten
 st.markdown("""
-<div class="custom-box">
-    <div class="custom-title">Kelompok 8</div>
-    <p class="custom-text">
-        1. Afsha Zahira Riyandi – 2460311<br>
-        2. Intan Permata Sari – 2460391<br>
-        3. Muhammad Rayhan – 2460443<br>
-        4. Ramdan Abdul Azis – 2460490<br>
-        5. Yohana Angelica Lumbanbatu – 2460539
-    </p>
-</div>
+<style>
+.custom-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.custom-title {
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+.custom-text {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+</style>
 """, unsafe_allow_html=True)
 
 
