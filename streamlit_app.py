@@ -538,6 +538,86 @@ st.markdown("---")
     </div>
     """, unsafe_allow_html=True)
 
+with tab1:  # Titrasi Asam-Basa
+    # Tambahkan CSS styling agar semua tulisan memiliki latar putih transparan
+    st.markdown("""
+    <style>
+    .custom-bg {
+        background-color: rgba(255, 255, 255, 0.92);
+        padding: 20px;
+        border-radius: 12px;
+        color: #111;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .custom-bg h2, .custom-bg h4, .custom-bg p, .custom-bg li {
+        color: #111;
+        font-size: 16px;
+    }
+    .custom-bg h2 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Bungkus konten dalam background putih
+    st.markdown("""
+    <div class="custom-bg">
+        <h2>Titrasi Asam-Basa</h2>
+        <p>Pilih jenis titran dan analit untuk melihat rekomendasi indikator titrasi berdasarkan titik ekuivalen.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+    with col1:
+        jenis_titran = st.selectbox(
+            "Jenis Titran",
+            ["Asam Kuat", "Asam Lemah", "Basa Kuat", "Basa Lemah"],
+            key="titran_ab"
+        )
+    with col2:
+        jenis_analit = st.selectbox(
+            "Jenis Analit",
+            ["Asam Kuat", "Asam Lemah", "Basa Kuat", "Basa Lemah"],
+            key="analit_ab"
+        )
+
+    # Tambahan: rekomendasi indikator
+    st.markdown("""
+    <div class="custom-bg">
+        <h4>Rekomendasi Indikator</h4>
+        <ul>
+            <li><b>Asam kuat + Basa kuat:</b> Bromtimol Biru (pH 6.0–7.6)</li>
+            <li><b>Asam lemah + Basa kuat:</b> Fenolftalein (pH 8.2–10)</li>
+            <li><b>Asam kuat + Basa lemah:</b> Metil Oranye (pH 3.1–4.4)</li>
+            <li><b>Asam lemah + Basa lemah:</b> Tidak direkomendasikan – gunakan potensiometri</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Tambahan: deskripsi aplikasi
+    st.markdown("""
+    <div class="custom-bg">
+        <h4>Aplikasi Edukasi Titrasi</h4>
+        <p>Aplikasi ini bertujuan untuk memberikan edukasi mengenai pemilihan indikator dalam titrasi asam-basa melalui pendekatan visual dan interaktif.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Tambahan: nama kelompok
+    st.markdown("""
+    <div class="custom-bg">
+        <h4>Kelompok 8</h4>
+        <ul>
+            <li>Afsha Zahira Riyandi (2460311)</li>
+            <li>Intan Permata Sari (2460391)</li>
+            <li>Muhammad Rayhan (2460443)</li>
+            <li>Ramdan Abdul Azis (2460490)</li>
+            <li>Yohanna Angelica Lumbanbatu (246....)</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
 
    
 
