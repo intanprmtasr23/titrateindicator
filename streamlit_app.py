@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 import requests
-
+ 
 def set_bg_from_drive(file_id):
     url = f"https://drive.google.com/uc?export=download&id={file_id}"
     response = requests.get(url)
@@ -22,36 +22,97 @@ def set_bg_from_drive(file_id):
         )
     else:
         st.error("Gagal mengambil gambar dari Google Drive.")
-
+ 
 # Masukkan file ID di sini:
 file_id = "1tq5WqVASGOSqqGKWOziSZNBlUjT3ST0e"
 set_bg_from_drive(file_id)
-
-
-# CSS untuk mempercantik tampilan
+ 
+# CSS untuk mempercantik tampilan dan menambahkan latar belakang putih
 st.markdown("""
 <style>
+/* Mengatur warna teks untuk semua elemen */
+body, .stApp, .stMarkdown, .stText, .stAlert, .stSelectbox, .stSlider, .stExpander, .stTabs, h1, h2, h3, h4, h5, h6, p, li {
+    color: #333333 !important; /* Warna teks lebih gelap untuk kontras */
+}
+
+/* Latar belakang putih untuk area utama konten */
+.stApp > header {
+    background-color: rgba(255, 255, 255, 0.8) !important; /* Latar belakang putih transparan untuk header Streamlit */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.stApp > div:first-child > div:nth-child(3) {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan untuk konten utama */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Latar belakang putih untuk sidebar */
+.stSidebar > div:first-child {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan untuk sidebar */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Memperjelas teks di expander */
 div[data-testid="stExpander"] div[role="button"] p {
     font-size: 18px;
     font-weight: bold;
-    color: #2a3f5f;
+    color: #2a3f5f !important; /* Warna asli untuk judul expander */
 }
+
+/* Latar belakang untuk elemen yang sudah ada (misal: kotak judul) */
 .css-1aumxhk {
-    background-color: rgba(500,500,500,0.8);
+    background-color: rgba(255, 255, 255, 0.8) !important; /* Mengubah warna menjadi putih transparan */
     border-radius: 20px;
     padding: 20px;
 }
+
+/* Latar belakang untuk div judul dan tab */
+div[style*="background-color: rgba(200,200,200,0.8)"] {
+    background-color: rgba(255, 255, 255, 0.8) !important; /* Mengubah warna menjadi putih transparan */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Menyesuaikan warna teks di dalam div dengan latar belakang putih */
+div[style*="background-color: rgba(255, 255, 255, 0.8)"] h1,
+div[style*="background-color: rgba(255, 255, 255, 0.8)"] h2,
+div[style*="background-color: rgba(255, 255, 255, 0.8)"] h3,
+div[style*="background-color: rgba(255, 255, 255, 0.8)"] p,
+div[style*="background-color: rgba(255, 255, 255, 0.8)"] li {
+    color: #2a3f5f !important; /* Warna teks yang jelas untuk judul dan paragraf */
+}
+
+/* Memastikan teks di dalam tab juga jelas */
+.stTabs [data-testid="stMarkdownContainer"] p {
+    color: #333333 !important;
+}
+
+/* Memastikan teks di dalam selectbox dan slider jelas */
+.stSelectbox label, .stSlider label {
+    color: #333333 !important;
+}
+
+/* Memastikan teks di dalam st.success dan st.error jelas */
+.stAlert p {
+    color: #333333 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
-
+ 
 # Judul aplikasi dengan style
 st.markdown("""
-<div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
+<div style="background-color: rgba(255,255,255,0.8);
+padding: 20px; border-radius: 10px;">
     <h1 style="color: #2a3f5f; text-align: center;">🧪 Aplikasi Pemilihan Indikator Titrasi</h1>
     <p style="text-align: center;">Pilih indikator yang sesuai untuk berbagai jenis titrasi analitik</p>
 </div>
 """, unsafe_allow_html=True)
-
+ 
 # Tab untuk berbagai jenis titrasi
 tab1, tab2, tab3, tab4 = st.tabs([
     "Asam-Basa", 
@@ -59,10 +120,10 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "Kompleksometri", 
     "Pengendapan"
 ])
-
+ 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -82,7 +143,8 @@ with tab1:  # Titrasi Asam-Basa
         )
     
     # Menentukan pH ekuivalen
-    if ("Asam Kuat" in jenis_titran and "Basa Kuat" in jenis_analit) or ("Basa Kuat" in jenis_titran and "Asam Kuat" in jenis_analit):
+    if ("Asam Kuat" in jenis_titran and "Basa Kuat" in jenis_analit) or \
+       ("Basa Kuat" in jenis_titran and "Asam Kuat" in jenis_analit):
         pH_eq = 7.0
         st.success("Titik ekuivalen pada pH 7.0 (netral)")
     elif ("Asam Kuat" in jenis_titran and "Basa Lemah" in jenis_analit):
@@ -130,10 +192,10 @@ with tab1:  # Titrasi Asam-Basa
                 st.write(f"Rentang pH: {low} - {high}")
     else:
         st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
-
+ 
 with tab2:  # Titrasi Redoks
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -155,7 +217,7 @@ with tab2:  # Titrasi Redoks
           - Suasana asam kuat (H₂SO₄)
           - Suhu 60-70°C untuk beberapa analit
         - Aplikasi: 
-          - Penentuan Fe²⁺ 
+          - Penentuan Fe²⁺
           - Analisis H₂O₂
           - Penentuan oksalat
         """)
@@ -175,10 +237,10 @@ with tab2:  # Titrasi Redoks
           - Analisis klorin
           - Penentuan sulfit
         """)
-
+ 
 with tab3:  # Titrasi Kompleksometri
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -194,11 +256,11 @@ with tab3:  # Titrasi Kompleksometri
         ### Penentuan Kesadahan Air (Ca²⁺ dan Mg²⁺)
         - Indikator: 
           1. Eriochrome Black T (EBT)
-            - Perubahan warna: Merah anggur ke biru
-            - Kondisi: pH 10 (buffer NH₃/NH₄Cl)
+             - Perubahan warna: Merah anggur ke biru
+             - Kondisi: pH 10 (buffer NH₃/NH₄Cl)
           2. Calmagite
-            - Perubahan warna: Merah ke biru
-            - Kondisi: pH 10, lebih stabil dari EBT
+             - Perubahan warna: Merah ke biru
+             - Kondisi: pH 10, lebih stabil dari EBT
         - Titran: EDTA 0.01 M
         - Aplikasi: Analisis kesadahan air
         """)
@@ -208,11 +270,11 @@ with tab3:  # Titrasi Kompleksometri
         ### Penentuan Zn²⁺
         - Indikator: 
           1. Eriochrome Black T (EBT)
-            - Perubahan warna: Merah anggur ke biru
-            - Kondisi: pH 10
+             - Perubahan warna: Merah anggur ke biru
+             - Kondisi: pH 10
           2. Xylenol Orange
-            - Perubahan warna: Merah ke kuning
-            - Kondisi: pH 5-6 (buffer asetat)
+             - Perubahan warna: Merah ke kuning
+             - Kondisi: pH 5-6 (buffer asetat)
         - Aplikasi: Analisis seng dalam preparat farmasi
         """)
         
@@ -221,11 +283,11 @@ with tab3:  # Titrasi Kompleksometri
         ### Penentuan Cu²⁺
         - Indikator: 
           1. PAN [1-(2-Piridilazo)-2-naftol]
-            - Perubahan warna: Kuning ke merah
-            - Kondisi: pH 2-3 (asam nitrat)
+             - Perubahan warna: Kuning ke merah
+             - Kondisi: pH 2-3 (asam nitrat)
           2. Murexide
-            - Perubahan warna: Kuning ke ungu
-            - Kondisi: pH 9 (buffer amonia)
+             - Perubahan warna: Kuning ke ungu
+             - Kondisi: pH 9 (buffer amonia)
         - Aplikasi: Analisis tembaga dalam paduan logam
         """)
         
@@ -243,11 +305,11 @@ with tab3:  # Titrasi Kompleksometri
         ### Penentuan {ion_logam}
         - Indikator utama: 
           1. Xylenol Orange
-            - Perubahan warna: Merah ke kuning
-            - Kondisi: pH 3-6 (buffer asetat)
+             - Perubahan warna: Merah ke kuning
+             - Kondisi: pH 3-6 (buffer asetat)
           2. Dithizone (untuk Hg²⁺)
-            - Perubahan warna: Hijau ke merah
-            - Kondisi: pH <2 (asam kuat)
+             - Perubahan warna: Hijau ke merah
+             - Kondisi: pH <2 (asam kuat)
         - Aplikasi: Analisis logam berat dalam sampel lingkungan
         """)
         
@@ -256,17 +318,17 @@ with tab3:  # Titrasi Kompleksometri
         ### Penentuan {ion_logam}
         - Indikator umum: 
           1. Pyrocatechol Violet
-            - Perubahan warna: Biru ke kuning
-            - Kondisi: pH 4-6
+             - Perubahan warna: Biru ke kuning
+             - Kondisi: pH 4-6
           2. Eriochrome Cyanine R
-            - Perubahan warna: Merah ke biru
-            - Kondisi: pH 6-8
+             - Perubahan warna: Merah ke biru
+             - Kondisi: pH 6-8
         - Aplikasi: Analisis logam dalam paduan dan mineral
         """)
-
+ 
 with tab4:  # Titrasi Pengendapan
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -310,9 +372,9 @@ with tab4:  # Titrasi Pengendapan
         ### Metode Fajans (Indikator Adsorpsi)
         - Indikator: 
           1. Fluorescein
-            - Perubahan warna: Hijau kekuningan ke merah muda
+             - Perubahan warna: Hijau kekuningan ke merah muda
           2. Dichlorofluorescein
-            - Perubahan warna: Kuning ke merah muda
+             - Perubahan warna: Kuning ke merah muda
         - Kondisi Optimal:
           - pH sesuai indikator (5-9)
           - Partikel koloid harus terbentuk
@@ -321,11 +383,11 @@ with tab4:  # Titrasi Pengendapan
           - Penentuan halida dengan endpoint adsorpsi
           - Analisis dengan presisi tinggi
         """)
-
+ 
 # Sidebar dengan informasi tambahan
 with st.sidebar:
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
         <h3 style="color: #2a3f5f;">Panduan Penggunaan</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -338,7 +400,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tips Penting</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -351,42 +413,38 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    Developer: Kelompok 8  
-    lingkup : Praktikum Kimia Analitik
+    Developer: Kelompok 8 
+    Lingkup: Praktikum Kimia Analitik
     """)
-
-import streamlit as st
-
-# Judul aplikasi
-st.title("Aplikasi Edukasi Titrasi")
-st.write("""
-Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. 
-Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui antarmuka yang user-friendly.
-""")
-
-# (Tambahkan konten atau fitur utama aplikasi di sini jika ada)
-
+ 
+# Judul aplikasi di bagian bawah (diperbarui dengan latar belakang putih)
+st.markdown("""
+<div style="background-color: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <h1 style="color: #2a3f5f;">Aplikasi Edukasi Titrasi</h1>
+    <p>Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui antarmuka yang user-friendly.</p>
+</div>
+""", unsafe_allow_html=True)
+ 
 # Garis pemisah
 st.markdown("---")
-
-# Nama kelompok di bagian bawah
-st.subheader("Kelompok 8")
+ 
+# Nama kelompok di bagian bawah (diperbarui dengan latar belakang putih)
 st.markdown("""
-**Nama Anggota:**
-
-1. Afsha Zahira Riyandi – 2460311  
-2. Intan Permata Sari – 2460391  
-3. Muhammad Rayhan – 2460443  
-4. Ramdan Abdul Azis – 2460490  
-5. Yohana Angelica Lumbanbatu – 2460539
-""")
-
-
-
-
+<div style="background-color: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <h2 style="color: #2a3f5f;">Kelompok 8</h2>
+    <p><b>Nama Anggota:</b></p>
+    <ul>
+        <li>Afsha Zahira Riyandi – 2460311</li>
+        <li>Intan Permata Sari – 2460391</li>
+        <li>Muhammad Rayhan – 2460443</li>
+        <li>Ramdan Abdul Azis – 2460490</li>
+        <li>Yohana Angelica Lumbanbatu – 2460539</li>
+    </ul>
+</div>
+""", unsafe_allow_html=True)
