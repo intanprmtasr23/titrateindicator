@@ -206,12 +206,12 @@ with tab1:  # Titrasi Asam-Basa
         for name, low, high, change, app in rec_indicators:
             # Menggunakan st.expander untuk setiap indikator
             with st.expander(f"{name}: pH {low}-{high} ({change})"):
-                # Konten di dalam expander dengan latar belakang biru muda dan teks jelas
+                # Konten di dalam expander dengan latar belakang hitam dan teks putih tebal
                 st.markdown(f"""
-                <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
-                    <p style="color: #333333; font-weight: bold;">Perubahan Warna: {change}</p>
-                    <p style="color: #333333; font-weight: bold;">Aplikasi Khas: {app}</p>
-                    <p style="color: #333333; font-weight: bold;">Rentang pH: {low} - {high}</p>
+                <div style="background-color: rgba(0, 0, 0, 0.8); padding: 10px; border-radius: 5px;">
+                    <p style="color: #FFFFFF; font-weight: bold;">Perubahan Warna: {change}</p>
+                    <p style="color: #FFFFFF; font-weight: bold;">Aplikasi Khas: {app}</p>
+                    <p style="color: #FFFFFF; font-weight: bold;">Rentang pH: {low} - {high}</p>
                 </div>
                 """, unsafe_allow_html=True)
     else:
@@ -408,7 +408,7 @@ with tab4:  # Titrasi Pengendapan
           1. Fluorescein
              - Perubahan warna: Hijau kekuningan ke merah muda
           2. Dichlorofluorescein
-             - Perubahan warna: Kuning ke merah muda
+             - Perubahan warna: Kununing ke merah muda
         - Kondisi Optimal:
           - pH sesuai indikator (5-9)
           - Partikel koloid harus terbentuk
