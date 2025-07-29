@@ -198,8 +198,9 @@ with tab1:  # Titrasi Asam-Basa
             rec_indicators.append((name, low, high, data["perubahan"], data["aplikasi"]))
     
     if rec_indicators:
+        # Menghapus latar belakang biru muda dari teks "Indikator yang sesuai..."
         st.markdown(f"""
-        <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+        <div style="padding: 10px; border-radius: 5px; margin-bottom: 10px;">
             <p style="color: #333333;">Indikator yang sesuai untuk pH titik ekuivalen {pH_eq:.1f}:</p>
         </div>
         """, unsafe_allow_html=True)
