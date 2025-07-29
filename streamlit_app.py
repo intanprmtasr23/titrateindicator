@@ -375,14 +375,15 @@ Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi seder
 # Garis pemisah
 st.markdown("---")
 
-# Nama kelompok di bagian bawah
-st.subheader("Kelompok 8")
-st.markdown("""
-**Nama Anggota:**
-
-1. Afsha Zahira Riyandi – 2460311  
-2. Intan Permata Sari – 2460391  
-3. Muhammad Rayhan – 2460443  
-4. Ramdan Abdul Azis – 2460490  
-5. Yohana Angelica Lumbanbatu – 2460539
-""")
+<div class="content-box">
+    <div class="title-bold">👥 Kelompok 8</div>
+    <p class="text-clear">
+        <strong>Nama Anggota:</strong><br>
+        Afsha Zahira Riyandi – 2460311<br>
+        Intan Permata Sari – 2460391<br>
+        Muhammad Rayhan – 2460443<br>
+        Ramdan Abdul Azis – 2460490<br>
+        Yohana Angelica Lumbanbatu – 2460539
+    </p>
+</div>
+""", unsafe_allow_html=True)
