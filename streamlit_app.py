@@ -37,7 +37,7 @@ div[data-testid="stExpander"] div[role="button"] p {
     color: #2a3f5f;
 }
 .css-1aumxhk {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(500,500,500,0.8);
     border-radius: 20px;
     padding: 20px;
 }
@@ -46,7 +46,7 @@ div[data-testid="stExpander"] div[role="button"] p {
 
 # Judul aplikasi dengan style
 st.markdown("""
-<div style="background-color: rgba(255, 255, 255, 0.95); padding: 20px; border-radius: 10px;">
+<div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
     <h1 style="color: #2a3f5f; text-align: center;">🧪 Aplikasi Pemilihan Indikator Titrasi</h1>
     <p style="text-align: center;">Pilih indikator yang sesuai untuk berbagai jenis titrasi analitik</p>
 </div>
@@ -60,29 +60,10 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "Pengendapan"
 ])
 
-# Tambahkan di awal tab atau halaman tempat kamu ingin gaya ini berlaku
-st.markdown("""
-    <style>
-    .custom-box {
-        background-color: rgba(255, 255, 255, 0.95; ) /* Atur transparansi: 1 = solid putih, 0 = transparan */
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        margin-bottom: 25px;
-    }
-    .custom-text {
-        color: #000000; /* warna teks hitam */
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 1.5;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
-    <div class="content-box">
-    <div class="title-bold">Titrasi Asam-Basa</h2>
+    <div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
+        <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
     </div>
     """, unsafe_allow_html=True)
     
@@ -131,14 +112,9 @@ with tab1:  # Titrasi Asam-Basa
         "Alizarin Kuning R": {"rentang": (10.1, 12.0), "perubahan": "Kuning ke Merah", "aplikasi": "Titrasi basa sangat kuat"}
     }
     
-   # Rekomendasi Indikator
-st.markdown("""
-    <div class="custom-box">
-        <div class="custom-title">Rekomendasi Indikator</div>
-        <div class="custom-text">
-           
-        </div>
-    </div>
+    # Rekomendasi indikator
+    st.subheader("Rekomendasi Indikator")
+    rec_indicators = []
     
     for name, data in indikator_ab.items():
         low, high = data["rentang"]
@@ -156,15 +132,12 @@ st.markdown("""
         st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
 
 with tab2:  # Titrasi Redoks
-   # Rekomendasi Indikator
-st.markdown("""
-    <div class="custom-box">
-        <div class="custom-title">Titrasi Indikator</div>
-        <div class="custom-text">
-           
-        </div>
+    st.markdown("""
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+        <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
     </div>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+    
     metode_redoks = st.selectbox(
         "Pilih Metode Titrasi Redoks",
         ["Permanganometri", "Iodometri"],
@@ -205,7 +178,7 @@ st.markdown("""
 
 with tab3:  # Titrasi Kompleksometri
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -293,7 +266,7 @@ with tab3:  # Titrasi Kompleksometri
 
 with tab4:  # Titrasi Pengendapan
     st.markdown("""
-    <div style="background-color: rgbar(255, 255, 255, 0.95); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -352,7 +325,7 @@ with tab4:  # Titrasi Pengendapan
 # Sidebar dengan informasi tambahan
 with st.sidebar:
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h3 style="color: #2a3f5f;">Panduan Penggunaan</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -365,7 +338,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tips Penting</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -378,7 +351,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -414,25 +387,6 @@ st.markdown("""
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
 
-# Tambahkan di awal tab atau halaman tempat kamu ingin gaya ini berlaku
-st.markdown("""
-    <style>
-    .custom-box {
-        background-color: rgba(255, 255, 255, 0.95);  /* Atur transparansi: 1 = solid putih, 0 = transparan */
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        margin-bottom: 25px;
-    }
-    .custom-text {
-        color: #000000; /* warna teks hitam */
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 1.5;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 # Judul dan Penjelasan Aplikasi
 st.markdown("""
     <div class="custom-box">
@@ -445,17 +399,6 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Rekomendasi Indikator
-st.markdown("""
-    <div class="custom-box">
-        <div class="custom-title">Rekomendasi Indikator</div>
-        <div class="custom-text">
-           
-        </div>
-    </div>
-""", unsafe_allow_html=True)
-
-# Kelompok
 st.markdown("""
     <div class="custom-box">
         <div class="custom-title">Kelompok 8</div>
@@ -469,4 +412,3 @@ st.markdown("""
         </div>
     </div>
 """, unsafe_allow_html=True)
-
