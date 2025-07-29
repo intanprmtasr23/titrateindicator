@@ -213,12 +213,14 @@ with tab1:  # Titrasi Asam-Basa
         </div>
         """, unsafe_allow_html=True)
         for name, low, high, change, app in rec_indicators:
-            # Konten di dalam expander dengan latar belakang biru muda dan teks jelas
-            st.markdown(f"""
+            # Menggunakan st.expander untuk setiap indikator
+            with st.expander(f"{name}: pH {low}-{high} ({change})"):
+                # Konten di dalam expander dengan latar belakang biru muda dan teks jelas
+                st.markdown(f"""
                 <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
-                    <p style="color: #FFFFFF; font-weight: bold;">Perubahan Warna: {change}</p>
-                    <p style="color: #FFFFFF; font-weight: bold;">Aplikasi Khas: {app}</p>
-                    <p style="color: #FFFFFF; font-weight: bold;">Rentang pH: {low} - {high}</p>
+                    <p style="color: #333333; font-weight: bold;">Perubahan Warna: {change}</p>
+                    <p style="color: #333333; font-weight: bold;">Aplikasi Khas: {app}</p>
+                    <p style="color: #333333; font-weight: bold;">Rentang pH: {low} - {high}</p>
                 </div>
                 """, unsafe_allow_html=True)
     else:
