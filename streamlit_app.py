@@ -139,8 +139,6 @@ st.markdown("""
            
         </div>
     </div>
-""", unsafe_allow_html=True)("Rekomendasi Indikator")
-    rec_indicators = []
     
     for name, data in indikator_ab.items():
         low, high = data["rentang"]
