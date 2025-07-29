@@ -91,14 +91,16 @@ div[style*="background-color: rgba(255, 255, 255, 0.8)"] li {
     color: #333333 !important;
 }
 
-/* Memastikan teks di dalam selectbox dan slider jelas */
-.stSelectbox label, .stSlider label {
-    color: #333333 !important;
+/* Memastikan teks pada judul tab menjadi putih dan tebal */
+.stTabs [data-testid="stTab"] p {
+    color: white !important;
+    font-weight: bold !important;
 }
 
-/* Memastikan teks di dalam st.success dan st.error jelas */
-.stAlert p {
-    color: #333333 !important;
+/* Memastikan teks pada judul tab yang aktif menjadi putih dan tebal */
+.stTabs [data-testid="stTab"] button[aria-selected="true"] p {
+    color: white !important;
+    font-weight: bold !important;
 }
 
 </style>
