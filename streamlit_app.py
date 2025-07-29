@@ -523,8 +523,6 @@ st.markdown("---")
     </div>
     """, unsafe_allow_html=True)
 
-
-# Nama kelompok di bagian bawah
     # Kelompok dan anggota
     st.markdown("""
     <div class="custom-bg">
@@ -539,5 +537,8 @@ st.markdown("---")
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
+
+   
 
 
