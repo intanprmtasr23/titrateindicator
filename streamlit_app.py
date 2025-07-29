@@ -62,8 +62,8 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
-        <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
+    <div class="content-box">
+    <div class="title-bold">Titrasi Asam-Basa</h2>
     </div>
     """, unsafe_allow_html=True)
     
@@ -133,8 +133,8 @@ with tab1:  # Titrasi Asam-Basa
 
 with tab2:  # Titrasi Redoks
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
-        <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
+    <div class="content-box">
+    <div class="title-bold">Titrasi Redoks</h2>
     </div>
     """, unsafe_allow_html=True)
     
