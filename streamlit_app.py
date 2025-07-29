@@ -37,8 +37,8 @@ div[data-testid="stExpander"] div[role="button"] p {
     color: #2a3f5f;
 }
 .css-1aumxhk {
-    background-color: rgba(500,500,500,0.8);
-    border-radius: 20px;
+    background-color: rgba(500,500,500,0.10);
+    border-radius: 10px;
     padding: 20px;
 }
 </style>
@@ -46,7 +46,7 @@ div[data-testid="stExpander"] div[role="button"] p {
 
 # Judul aplikasi dengan style
 st.markdown("""
-<div style="background-color:gba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
+<div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
     <h1 style="color: #2a3f5f; text-align: center;">🧪 Aplikasi Pemilihan Indikator Titrasi</h1>
     <p style="text-align: center;">Pilih indikator yang sesuai untuk berbagai jenis titrasi analitik</p>
 </div>
@@ -62,7 +62,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
+    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -133,7 +133,7 @@ with tab1:  # Titrasi Asam-Basa
 
 with tab2:  # Titrasi Redoks
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
         <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -178,7 +178,7 @@ with tab2:  # Titrasi Redoks
 
 with tab3:  # Titrasi Kompleksometri
     st.markdown("""
-    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -266,7 +266,7 @@ with tab3:  # Titrasi Kompleksometri
 
 with tab4:  # Titrasi Pengendapan
     st.markdown("""
-    <div style="content-box": rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -325,7 +325,7 @@ with tab4:  # Titrasi Pengendapan
 # Sidebar dengan informasi tambahan
 with st.sidebar:
     st.markdown("""
-    <div class="content-box">r: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(500,500,500,0.10); padding: 15px; border-radius: 10px;">
         <h3 style="color: #2a3f5f;">Panduan Penggunaan</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -338,7 +338,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="content-box": rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px; margin-top: 20px;">
         <h3 style="color: #2a3f5f;">Tips Penting</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -351,13 +351,15 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="content-box": rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
+    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px; margin-top: 20px;">
         <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    Developer: Kelompok 8  
+    Versi: 3.0  
+    Developer: Kimia Analitik Digital  
+    Lisensi: MIT Open Source  
     lingkup : Praktikum Kimia Analitik
     """)
 
@@ -378,7 +380,7 @@ st.markdown("---")
 # Nama kelompok di bagian bawah
 st.subheader("Kelompok 8")
 st.markdown("""
-**Nama Anggota:**
+Nama Anggota:
 
 1. Afsha Zahira Riyandi – 2460311  
 2. Intan Permata Sari – 2460391  
@@ -386,69 +388,3 @@ st.markdown("""
 4. Ramdan Abdul Azis – 2460490  
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
-
-st.markdown("""
-<style>
-/* Atur gaya seluruh aplikasi */
-.stApp {
-    font-family: 'Arial', sans-serif;
-    color: #111;
-}
-
-/* Kotak latar belakang putih transparan */
-.content-box {
-    background-color: rgba(255, 255, 255, 0.96);
-    padding: 24px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* Judul besar agar mudah dibaca */
-.title-large {
-    font-size: 28px;
-    font-weight: bold;
-    color: #222;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* Teks paragraf umum */
-.text-normal {
-    font-size: 18px;
-    color: #333;
-    text-align: justify;
-    line-height: 1.6;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<div class="content-box">
-    <div class="title-bold">📚 Aplikasi Edukasi Titrasi</div>
-    <p class="text-clear">
-        Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui antarmuka yang user-friendly.
-    </p>
-</div>
-
-<div class="content-box">
-    <div class="title-bold">🎯 Rekomendasi Indikator</div>
-    <p class="text-clear">
-        Indikator yang sesuai untuk pH titik ekuivalen 7.0:<br>
-        <strong>Bromtimol Biru</strong>: pH 6.0–7.6 (Kuning ke Biru)<br>
-        <strong>Fenol Merah</strong>: pH 6.8–8.4 (Kuning ke Merah)
-    </p>
-</div>
-
-<div class="content-box">
-    <div class="title-bold">👥 Kelompok 8</div>
-    <p class="text-clear">
-        <strong>Nama Anggota:</strong><br>
-        Afsha Zahira Riyandi – 2460311<br>
-        Intan Permata Sari – 2460391<br>
-        Muhammad Rayhan – 2460443<br>
-        Ramdan Abdul Azis – 2460490<br>
-        Yohana Angelica Lumbanbatu – 2460539
-    </p>
-</div>
-""", unsafe_allow_html=True)
