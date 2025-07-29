@@ -1,4 +1,3 @@
-
 import streamlit as st
 import base64
 import requests
@@ -123,11 +122,11 @@ tab1, tab2, tab3, tab4 = st.tabs([
 ])
  
 with tab1:  # Titrasi Asam-Basa
+    # Menambahkan div dengan latar belakang untuk seluruh konten tab
     st.markdown("""
     <div style="background-color: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
-    </div>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True) # Start div for tab content
     
     col1, col2 = st.columns(2)
     with col1:
@@ -205,28 +204,31 @@ with tab1:  # Titrasi Asam-Basa
         </div>
         """, unsafe_allow_html=True)
         for name, low, high, change, app in rec_indicators:
-            # Menambahkan latar belakang biru muda dan teks tebal hitam untuk setiap indikator yang direkomendasikan
-            st.markdown(f"""
-            <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-                <h4 style="color: #333333; font-weight: bold;">{name}: pH {low}-{high} ({change})</h4>
-                <p style="color: #333333; font-weight: bold;">Perubahan Warna: {change}</p>
-                <p style="color: #333333; font-weight: bold;">Aplikasi Khas: {app}</p>
-                <p style="color: #333333; font-weight: bold;">Rentang pH: {low} - {high}</p>
-            </div>
-            """, unsafe_allow_html=True)
+            # Menggunakan st.expander untuk setiap indikator
+            with st.expander(f"{name}: pH {low}-{high} ({change})"):
+                # Konten di dalam expander dengan latar belakang biru muda dan teks jelas
+                st.markdown(f"""
+                <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+                    <p style="color: #333333; font-weight: bold;">Perubahan Warna: {change}</p>
+                    <p style="color: #333333; font-weight: bold;">Aplikasi Khas: {app}</p>
+                    <p style="color: #333333; font-weight: bold;">Rentang pH: {low} - {high}</p>
+                </div>
+                """, unsafe_allow_html=True)
     else:
         st.markdown(f"""
         <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
             <p style="color: #FF4B4B;">Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.</p>
         </div>
         """, unsafe_allow_html=True)
- 
+    
+    st.markdown("</div>", unsafe_allow_html=True) # End div for tab content
+
 with tab2:  # Titrasi Redoks
+    # Menambahkan div dengan latar belakang untuk seluruh konten tab
     st.markdown("""
-    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
-    </div>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True) # Start div for tab content
     
     metode_redoks = st.selectbox(
         "Pilih Metode Titrasi Redoks",
@@ -265,13 +267,15 @@ with tab2:  # Titrasi Redoks
           - Analisis klorin
           - Penentuan sulfit
         """)
- 
+    
+    st.markdown("</div>", unsafe_allow_html=True) # End div for tab content
+
 with tab3:  # Titrasi Kompleksometri
+    # Menambahkan div dengan latar belakang untuk seluruh konten tab
     st.markdown("""
-    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
-    </div>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True) # Start div for tab content
     
     ion_logam = st.selectbox(
         "Pilih Ion Logam yang Dititrasi",
@@ -353,13 +357,15 @@ with tab3:  # Titrasi Kompleksometri
              - Kondisi: pH 6-8
         - Aplikasi: Analisis logam dalam paduan dan mineral
         """)
- 
+    
+    st.markdown("</div>", unsafe_allow_html=True) # End div for tab content
+
 with tab4:  # Titrasi Pengendapan
+    # Menambahkan div dengan latar belakang untuk seluruh konten tab
     st.markdown("""
-    <div style="background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px;">
+    <div style="background-color: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
-    </div>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True) # Start div for tab content
     
     metode_pengendapan = st.selectbox(
         "Pilih Metode Titrasi Pengendapan",
@@ -411,6 +417,8 @@ with tab4:  # Titrasi Pengendapan
           - Penentuan halida dengan endpoint adsorpsi
           - Analisis dengan presisi tinggi
         """)
+    
+    st.markdown("</div>", unsafe_allow_html=True) # End div for tab content
  
 # Sidebar dengan informasi tambahan
 with st.sidebar:
