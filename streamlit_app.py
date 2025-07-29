@@ -520,7 +520,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+    <div style="padding: 10px; border-radius: 5px;">
     <p style="color: #333333;">1. Pilih jenis titrasi dari tab menu</p>
     <p style="color: #333333;">2. Tentukan parameter analisis</p>
     <p style="color: #333333;">3. Baca rekomendasi indikator</p>
@@ -535,7 +535,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+    <div style="padding: 10px; border-radius: 5px;">
     <p style="color: #333333;">- Kalibrasi larutan titran sebelum digunakan</p>
     <p style="color: #333333;">- Gunakan indikator secukupnya (terlalu banyak dapat mengganggu)</p>
     <p style="color: #333333;">- Catat perubahan warna dengan cermat</p>
@@ -550,7 +550,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px;">
+    <div style="padding: 10px; border-radius: 5px;">
     <p style="color: #333333;">Developer: Kelompok 8</p> 
     <p style="color: #333333;">Lingkup: Praktikum Kimia Analitik</p>
     </div>
