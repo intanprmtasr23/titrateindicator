@@ -62,6 +62,30 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
+    <style>
+    .text-container {
+        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .text-container h1, .text-container h2, .text-container h3 {
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+    }
+    .text-container p {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        text-align: justify;
+        margin: 10px 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+    st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
     </div>
@@ -113,6 +137,30 @@ with tab1:  # Titrasi Asam-Basa
     }
     
     # Rekomendasi indikator
+    st.markdown("""
+    <style>
+    .text-container {
+        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .text-container h1, .text-container h2, .text-container h3 {
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+    }
+    .text-container p {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        text-align: justify;
+        margin: 10px 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
     st.subheader("Rekomendasi Indikator")
     rec_indicators = []
     
@@ -177,6 +225,30 @@ with tab2:  # Titrasi Redoks
         """)
 
 with tab3:  # Titrasi Kompleksometri
+    st.markdown("""
+    <style>
+    .text-container {
+        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .text-container h1, .text-container h2, .text-container h3 {
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+    }
+    .text-container p {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        text-align: justify;
+        margin: 10px 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
     st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
@@ -266,6 +338,30 @@ with tab3:  # Titrasi Kompleksometri
 
 with tab4:  # Titrasi Pengendapan
     st.markdown("""
+    <style>
+    .text-container {
+        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .text-container h1, .text-container h2, .text-container h3 {
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+    }
+    .text-container p {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        text-align: justify;
+        margin: 10px 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+    st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
     </div>
@@ -323,6 +419,30 @@ with tab4:  # Titrasi Pengendapan
         """)
 
 # Sidebar dengan informasi tambahan
+st.markdown("""
+    <style>
+    .text-container {
+        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .text-container h1, .text-container h2, .text-container h3 {
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+    }
+    .text-container p {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        text-align: justify;
+        margin: 10px 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 with st.sidebar:
     st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
@@ -376,6 +496,30 @@ Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi seder
 st.markdown("---")
 
 # Nama kelompok di bagian bawah
+st.markdown("""
+    <style>
+    .text-container {
+        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .text-container h1, .text-container h2, .text-container h3 {
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+    }
+    .text-container p {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        text-align: justify;
+        margin: 10px 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 st.subheader("Kelompok 8")
 st.markdown("""
 **Nama Anggota:**
@@ -387,28 +531,4 @@ st.markdown("""
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
 
-# Judul dan Penjelasan Aplikasi
-st.markdown("""
-    <div class="custom-box">
-        <div class="custom-title">Aplikasi Edukasi Titrasi</div>
-        <div class="custom-text">
-            Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif.
-            Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui
-            antarmuka yang user-friendly.
-        </div>
-    </div>
-""", unsafe_allow_html=True)
 
-st.markdown("""
-    <div class="custom-box">
-        <div class="custom-title">Kelompok 8</div>
-        <div class="custom-text">
-            Nama Anggota:<br>
-            1. Afsha Zahira Riyandi (2460311)<br>
-            2. Intan Permata Sari (2460391)<br>
-            3. Muhammad Rayhan (2460443)<br>
-            4. Ramdan Abdul Azis (2460490)<br>
-            5. Yohanna Angelica Lumbanbatu (2460503)
-        </div>
-    </div>
-""", unsafe_allow_html=True)
