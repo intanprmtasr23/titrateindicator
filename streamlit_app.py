@@ -37,8 +37,8 @@ div[data-testid="stExpander"] div[role="button"] p {
     color: #2a3f5f;
 }
 .css-1aumxhk {
-    background-color: rgba(500,500,500,0.10);
-    border-radius: 10px;
+    background-color: rgba(500,500,500,0.8);
+    border-radius: 20px;
     padding: 20px;
 }
 </style>
@@ -46,7 +46,7 @@ div[data-testid="stExpander"] div[role="button"] p {
 
 # Judul aplikasi dengan style
 st.markdown("""
-<div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
+<div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
     <h1 style="color: #2a3f5f; text-align: center;">🧪 Aplikasi Pemilihan Indikator Titrasi</h1>
     <p style="text-align: center;">Pilih indikator yang sesuai untuk berbagai jenis titrasi analitik</p>
 </div>
@@ -62,7 +62,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:  # Titrasi Asam-Basa
     st.markdown("""
-    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -133,7 +133,7 @@ with tab1:  # Titrasi Asam-Basa
 
 with tab2:  # Titrasi Redoks
     st.markdown("""
-    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Redoks</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -178,7 +178,7 @@ with tab2:  # Titrasi Redoks
 
 with tab3:  # Titrasi Kompleksometri
     st.markdown("""
-    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -266,7 +266,7 @@ with tab3:  # Titrasi Kompleksometri
 
 with tab4:  # Titrasi Pengendapan
     st.markdown("""
-    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Pengendapan</h2>
     </div>
     """, unsafe_allow_html=True)
@@ -325,7 +325,7 @@ with tab4:  # Titrasi Pengendapan
 # Sidebar dengan informasi tambahan
 with st.sidebar:
     st.markdown("""
-    <div style="background-color: rgba(500,500,500,0.10); padding: 15px; border-radius: 10px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h3 style="color: #2a3f5f;">Panduan Penggunaan</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -338,7 +338,7 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px; margin-top: 20px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tips Penting</h3>
     </div>
     """, unsafe_allow_html=True)
@@ -351,15 +351,13 @@ with st.sidebar:
     """)
     
     st.markdown("""
-    <div style="background-color: rgba(500,500,500,0.10); padding: 50px; border-radius: 25px; margin-top: 20px;">
+    <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 10px; margin-top: 5px;">
         <h3 style="color: #2a3f5f;">Tentang Aplikasi</h3>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-    Versi: 3.0  
-    Developer: Kimia Analitik Digital  
-    Lisensi: MIT Open Source  
+    Developer: Kelompok 8  
     lingkup : Praktikum Kimia Analitik
     """)
 
@@ -380,7 +378,7 @@ st.markdown("---")
 # Nama kelompok di bagian bawah
 st.subheader("Kelompok 8")
 st.markdown("""
-Nama Anggota:
+**Nama Anggota:**
 
 1. Afsha Zahira Riyandi – 2460311  
 2. Intan Permata Sari – 2460391  
