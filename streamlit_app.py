@@ -514,6 +514,8 @@ st.markdown("---")
 
     # Aplikasi Edukasi Titrasi
     <div class="custom-bg">
+     st.markdown("""
+
         <h4>Aplikasi Edukasi Titrasi</h4>
         <p>
         Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. 
