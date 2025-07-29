@@ -103,6 +103,12 @@ div[style*="background-color: rgba(255, 255, 255, 0.8)"] li {
     font-weight: bold !important;
 }
 
+/* Memastikan teks pada label selectbox dan slider menjadi putih dan tebal */
+.stSelectbox label, .stSlider label {
+    color: white !important;
+    font-weight: bold !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
  
