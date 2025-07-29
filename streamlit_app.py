@@ -387,78 +387,38 @@ st.markdown("""
 5. Yohana Angelica Lumbanbatu – 2460539
 """)
 
-# Tambahan CSS untuk memperjelas tampilan konten
 st.markdown("""
 <style>
-.custom-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+/* Atur gaya seluruh aplikasi */
+.stApp {
+    font-family: 'Arial', sans-serif;
+    color: #111;
 }
-.custom-title {
-    color: #1a1a1a;
+
+/* Kotak latar belakang putih transparan */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.96);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Judul besar agar mudah dibaca */
+.title-large {
     font-size: 28px;
     font-weight: bold;
+    color: #222;
     text-align: center;
+    margin-bottom: 15px;
 }
-.custom-text {
-    color: #333333;
-    font-size: 16px;
-    line-height: 1.6;
+
+/* Teks paragraf umum */
+.text-normal {
+    font-size: 18px;
+    color: #333;
     text-align: justify;
+    line-height: 1.6;
 }
 </style>
 """, unsafe_allow_html=True)
-
-st.markdown("""
-<div class="content-box">
-    <div class="title-large">📍 Rekomendasi Indikator</div>
-    <p class="text-normal">
-        Indikator dipilih berdasarkan kisaran pH di sekitar titik ekuivalen. 
-        Pilih indikator yang memiliki rentang perubahan warna yang mencakup nilai pH tersebut.
-    </p>
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown(f"""
-<div class="content-box">
-    <div class="title-large">✅ Indikator yang Sesuai untuk Titik Ekuivalen {pH_eq:.1f}</div>
-    <p class="text-normal">
-        Berikut adalah indikator yang memiliki rentang pH mencakup titik ekuivalen tersebut.
-        Perhatikan perubahan warna dan aplikasinya untuk memilih indikator yang paling sesuai.
-    </p>
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<div class="content-box">
-    <div class="title-large">🎓 Aplikasi Edukasi Titrasi</div>
-    <p class="text-normal">
-        Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. 
-        Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta rekomendasi indikator yang sesuai 
-        dengan titik ekuivalen masing-masing jenis titrasi. Tampilan dibuat user-friendly agar mudah digunakan 
-        baik oleh mahasiswa maupun pengajar.
-    </p>
-</div>
-""", unsafe_allow_html=True)
-
-
-st.markdown("""
-<div class="content-box">
-    <div class="title-large">👥 Kelompok 8</div>
-    <p class="text-normal">
-        <strong>Nama Anggota:</strong><br><br>
-        1. Afsha Zahira Riyandi – 2460311<br>
-        2. Intan Permata Sari – 2460391<br>
-        3. Muhammad Rayhan – 2460443<br>
-        4. Ramdan Abdul Azis – 2460490<br>
-        5. Yohana Angelica Lumbanbatu – 2460539
-    </p>
-</div>
-""", unsafe_allow_html=True)
-
-
-
-
