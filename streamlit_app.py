@@ -513,7 +513,6 @@ Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi seder
 st.markdown("---")
 
     # Aplikasi Edukasi Titrasi
-    st.markdown("""
     <div class="custom-bg">
         <h4>Aplikasi Edukasi Titrasi</h4>
         <p>
