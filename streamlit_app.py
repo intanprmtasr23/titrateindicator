@@ -302,78 +302,120 @@ with tab3:  # Titrasi Kompleksometri
     
     if ion_logam == "Ca²⁺/Mg²⁺":
         st.markdown("""
-        ### Penentuan Kesadahan Air (Ca²⁺ dan Mg²⁺)
-        - Indikator: 
-          1. Eriochrome Black T (EBT)
-             - Perubahan warna: Merah anggur ke biru
-             - Kondisi: pH 10 (buffer NH₃/NH₄Cl)
-          2. Calmagite
-             - Perubahan warna: Merah ke biru
-             - Kondisi: pH 10, lebih stabil dari EBT
-        - Titran: EDTA 0.01 M
-        - Aplikasi: Analisis kesadahan air
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Penentuan Kesadahan Air (Ca²⁺ dan Mg²⁺)</h3>
+            <p style="color: #333333;"><b>- Indikator:</b></p>
+            <ul style="color: #333333;">
+              <li>1. Eriochrome Black T (EBT)</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Merah anggur ke biru</li>
+                <li>Kondisi: pH 10 (buffer NH₃/NH₄Cl)</li>
+              </ul>
+              <li>2. Calmagite</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Merah ke biru</li>
+                <li>Kondisi: pH 10, lebih stabil dari EBT</li>
+              </ul>
+            </ul>
+            <p style="color: #333333;"><b>- Titran:</b> EDTA 0.01 M</p>
+            <p style="color: #333333;"><b>- Aplikasi:</b> Analisis kesadahan air</p>
+        </div>
+        """, unsafe_allow_html=True)
         
     elif ion_logam == "Zn²⁺":
         st.markdown("""
-        ### Penentuan Zn²⁺
-        - Indikator: 
-          1. Eriochrome Black T (EBT)
-             - Perubahan warna: Merah anggur ke biru
-             - Kondisi: pH 10
-          2. Xylenol Orange
-             - Perubahan warna: Merah ke kuning
-             - Kondisi: pH 5-6 (buffer asetat)
-        - Aplikasi: Analisis seng dalam preparat farmasi
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Penentuan Zn²⁺</h3>
+            <p style="color: #333333;"><b>- Indikator:</b></p>
+            <ul style="color: #333333;">
+              <li>1. Eriochrome Black T (EBT)</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Merah anggur ke biru</li>
+                <li>Kondisi: pH 10</li>
+              </ul>
+              <li>2. Xylenol Orange</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Merah ke kuning</li>
+                <li>Kondisi: pH 5-6 (buffer asetat)</li>
+              </ul>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b> Analisis seng dalam preparat farmasi</p>
+        </div>
+        """, unsafe_allow_html=True)
         
     elif ion_logam == "Cu²⁺":
         st.markdown("""
-        ### Penentuan Cu²⁺
-        - Indikator: 
-          1. PAN [1-(2-Piridilazo)-2-naftol]
-             - Perubahan warna: Kuning ke merah
-             - Kondisi: pH 2-3 (asam nitrat)
-          2. Murexide
-             - Perubahan warna: Kuning ke ungu
-             - Kondisi: pH 9 (buffer amonia)
-        - Aplikasi: Analisis tembaga dalam paduan logam
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Penentuan Cu²⁺</h3>
+            <p style="color: #333333;"><b>- Indikator:</b></p>
+            <ul style="color: #333333;">
+              <li>1. PAN [1-(2-Piridilazo)-2-naftol]</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Kuning ke merah</li>
+                <li>Kondisi: pH 2-3 (asam nitrat)</li>
+              </ul>
+              <li>2. Murexide</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Kuning ke ungu</li>
+                <li>Kondisi: pH 9 (buffer amonia)</li>
+              </ul>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b> Analisis tembaga dalam paduan logam</p>
+        </div>
+        """, unsafe_allow_html=True)
         
     elif ion_logam == "Fe³⁺":
         st.markdown("""
-        ### Penentuan Fe³⁺
-        - Indikator: Sulfosalicylic acid
-        - Perubahan warna: Ungu ke kuning
-        - Kondisi: pH 1.5-3.0, suhu 50-60°C
-        - Aplikasi: Analisis besi dalam bijih mineral
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Penentuan Fe³⁺</h3>
+            <p style="color: #333333;"><b>- Indikator:</b> Sulfosalicylic acid</p>
+            <p style="color: #333333;"><b>- Perubahan warna:</b> Ungu ke kuning</p>
+            <p style="color: #333333;"><b>- Kondisi:</b> pH 1.5-3.0, suhu 50-60°C</p>
+            <p style="color: #333333;"><b>- Aplikasi:</b> Analisis besi dalam bijih mineral</p>
+        </div>
+        """, unsafe_allow_html=True)
         
     elif ion_logam in ["Pb²⁺", "Hg²⁺"]:
         st.markdown(f"""
-        ### Penentuan {ion_logam}
-        - Indikator utama: 
-          1. Xylenol Orange
-             - Perubahan warna: Merah ke kuning
-             - Kondisi: pH 3-6 (buffer asetat)
-          2. Dithizone (untuk Hg²⁺)
-             - Perubahan warna: Hijau ke merah
-             - Kondisi: pH <2 (asam kuat)
-        - Aplikasi: Analisis logam berat dalam sampel lingkungan
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Penentuan {ion_logam}</h3>
+            <p style="color: #333333;"><b>- Indikator utama:</b></p>
+            <ul style="color: #333333;">
+              <li>1. Xylenol Orange</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Merah ke kuning</li>
+                <li>Kondisi: pH 3-6 (buffer asetat)</li>
+              </ul>
+              <li>2. Dithizone (untuk Hg²⁺)</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Hijau ke merah</li>
+                <li>Kondisi: pH &lt;2 (asam kuat)</li>
+              </ul>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b> Analisis logam berat dalam sampel lingkungan</p>
+        </div>
+        """, unsafe_allow_html=True)
         
     else:  # Al³⁺, Ni²⁺, Co²⁺
         st.markdown(f"""
-        ### Penentuan {ion_logam}
-        - Indikator umum: 
-          1. Pyrocatechol Violet
-             - Perubahan warna: Biru ke kuning
-             - Kondisi: pH 4-6
-          2. Eriochrome Cyanine R
-             - Perubahan warna: Merah ke biru
-             - Kondisi: pH 6-8
-        - Aplikasi: Analisis logam dalam paduan dan mineral
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Penentuan {ion_logam}</h3>
+            <p style="color: #333333;"><b>- Indikator umum:</b></p>
+            <ul style="color: #333333;">
+              <li>1. Pyrocatechol Violet</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Biru ke kuning</li>
+                <li>Kondisi: pH 4-6</li>
+              </ul>
+              <li>2. Eriochrome Cyanine R</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Merah ke biru</li>
+                <li>Kondisi: pH 6-8</li>
+              </ul>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b> Analisis logam dalam paduan dan mineral</p>
+        </div>
+        """, unsafe_allow_html=True)
     
     st.markdown("</div>", unsafe_allow_html=True) # End div for tab content
 
@@ -392,48 +434,72 @@ with tab4:  # Titrasi Pengendapan
     
     if metode_pengendapan == "Argentometri (Mohr)":
         st.markdown("""
-        ### Metode Mohr (Penentuan Klorida)
-        - Indikator: Ion kromat (CrO₄²⁻) 5%
-        - Perubahan warna: Kuning ke merah bata (Ag₂CrO₄)
-        - Kondisi Optimal:
-          - pH netral/sedikit basa (6.5-9.0)
-          - Tidak boleh ada amonia
-          - Suhu ruang
-        - Aplikasi: 
-          - Penentuan Cl⁻ dalam air minum
-          - Analisis Br⁻ (tidak untuk I⁻ atau SCN⁻)
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Metode Mohr (Penentuan Klorida)</h3>
+            <p style="color: #333333;"><b>- Indikator:</b> Ion kromat (CrO₄²⁻) 5%</p>
+            <p style="color: #333333;"><b>- Perubahan warna:</b> Kuning ke merah bata (Ag₂CrO₄)</p>
+            <p style="color: #333333;"><b>- Kondisi Optimal:</b></p>
+            <ul style="color: #333333;">
+              <li>pH netral/sedikit basa (6.5-9.0)</li>
+              <li>Tidak boleh ada amonia</li>
+              <li>Suhu ruang</li>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b></p>
+            <ul style="color: #333333;">
+              <li>Penentuan Cl⁻ dalam air minum</li>
+              <li>Analisis Br⁻ (tidak untuk I⁻ atau SCN⁻)</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
         
     elif metode_pengendapan == "Argentometri (Volhard)":
         st.markdown("""
-        ### Metode Volhard (Penentuan Halida Tidak Langsung)
-        - Indikator: Ion besi(III) (Fe³⁺) sebagai FeNH₄(SO₄)₂
-        - Perubahan warna: Tak berwarna ke merah (FeSCN²⁺)
-        - Kondisi Optimal:
-          - Suasana asam nitrat pekat
-          - Titrasi balik dengan SCN⁻
-          - Hindari cahaya langsung
-        - Aplikasi: 
-          - Penentuan Cl⁻, Br⁻, I⁻, SCN⁻
-          - Analisis perak dalam paduan
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Metode Volhard (Penentuan Halida Tidak Langsung)</h3>
+            <p style="color: #333333;"><b>- Indikator:</b> Ion besi(III) (Fe³⁺) sebagai FeNH₄(SO₄)₂</p>
+            <p style="color: #333333;"><b>- Perubahan warna:</b> Tak berwarna ke merah (FeSCN²⁺)</p>
+            <p style="color: #333333;"><b>- Kondisi Optimal:</b></p>
+            <ul style="color: #333333;">
+              <li>Suasana asam nitrat pekat</li>
+              <li>Titrasi balik dengan SCN⁻</li>
+              <li>Hindari cahaya langsung</li>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b></p>
+            <ul style="color: #333333;">
+              <li>Penentuan Cl⁻, Br⁻, I⁻, SCN⁻</li>
+              <li>Analisis perak dalam paduan</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
         
     elif metode_pengendapan == "Argentometri (Fajans)":
         st.markdown("""
-        ### Metode Fajans (Indikator Adsorpsi)
-        - Indikator: 
-          1. Fluorescein
-             - Perubahan warna: Hijau kekuningan ke merah muda
-          2. Dichlorofluorescein
-             - Perubahan warna: Kununing ke merah muda
-        - Kondisi Optimal:
-          - pH sesuai indikator (5-9)
-          - Partikel koloid harus terbentuk
-          - Pengadukan konstan
-        - Aplikasi: 
-          - Penentuan halida dengan endpoint adsorpsi
-          - Analisis dengan presisi tinggi
-        """)
+        <div style="background-color: rgba(173, 216, 230, 0.8); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <h3 style="color: #333333;">Metode Fajans (Indikator Adsorpsi)</h3>
+            <p style="color: #333333;"><b>- Indikator:</b></p>
+            <ul style="color: #333333;">
+              <li>1. Fluorescein</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Hijau kekuningan ke merah muda</li>
+              </ul>
+              <li>2. Dichlorofluorescein</li>
+              <ul style="color: #333333;">
+                <li>Perubahan warna: Kuning ke merah muda</li>
+              </ul>
+            </ul>
+            <p style="color: #333333;"><b>- Kondisi Optimal:</b></p>
+            <ul style="color: #333333;">
+              <li>pH sesuai indikator (5-9)</li>
+              <li>Partikel koloid harus terbentuk</li>
+              <li>Pengadukan konstan</li>
+            </ul>
+            <p style="color: #333333;"><b>- Aplikasi:</b></p>
+            <ul style="color: #333333;">
+              <li>Penentuan halida dengan endpoint adsorpsi</li>
+              <li>Analisis dengan presisi tinggi</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
     
     st.markdown("</div>", unsafe_allow_html=True) # End div for tab content
  
