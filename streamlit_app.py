@@ -512,16 +512,32 @@ Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi seder
 # Garis pemisah
 st.markdown("---")
 
-# Nama kelompok di bagian bawah
-st.subheader("Kelompok 8")
-st.markdown("""
-**Nama Anggota:**
+    # Aplikasi Edukasi Titrasi
+    st.markdown("""
+    <div class="custom-bg">
+        <h4>Aplikasi Edukasi Titrasi</h4>
+        <p>
+        Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. 
+        Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui antarmuka yang user-friendly.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-1. Afsha Zahira Riyandi – 2460311  
-2. Intan Permata Sari – 2460391  
-3. Muhammad Rayhan – 2460443  
-4. Ramdan Abdul Azis – 2460490  
-5. Yohana Angelica Lumbanbatu – 2460539
-""")
+
+# Nama kelompok di bagian bawah
+    # Kelompok dan anggota
+    st.markdown("""
+    <div class="custom-bg">
+        <h4>Kelompok 8</h4>
+        <p><b>Nama Anggota:</b></p>
+        <ul>
+            <li>Afsha Zahira Riyandi (2460311)</li>
+            <li>Intan Permata Sari (2460391)</li>
+            <li>Muhammad Rayhan (2460443)</li>
+            <li>Ramdan Abdul Azis (2460490)</li>
+            <li>Yohanna Angelica Lumbanbatu (246....)</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
 
