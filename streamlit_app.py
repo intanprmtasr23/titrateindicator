@@ -52,17 +52,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-    <style>
-    .custom-bg {
-        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 # Tab untuk berbagai jenis titrasi
 tab1, tab2, tab3, tab4 = st.tabs([
     "Asam-Basa", 
@@ -71,42 +60,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "Pengendapan"
 ])
 
-st.markdown("""
-    <style>
-    .custom-bg {
-        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 with tab1:  # Titrasi Asam-Basa
-    st.markdown("""
-    <style>
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .text-container h1, .text-container h2, .text-container h3 {
-        font-weight: 800;
-        color: #000;
-        text-align: center;
-    }
-    .text-container p {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        text-align: justify;
-        margin: 10px 0;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
     st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 20px; border-radius: 10px;">
         <h2 style="color: #2a3f5f;">Titrasi Asam-Basa</h2>
@@ -159,30 +113,6 @@ with tab1:  # Titrasi Asam-Basa
     }
     
     # Rekomendasi indikator
-    st.markdown("""
-    <style>
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .text-container h1, .text-container h2, .text-container h3 {
-        font-weight: 800;
-        color: #000;
-        text-align: center;
-    }
-    .text-container p {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        text-align: justify;
-        margin: 10px 0;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
     st.subheader("Rekomendasi Indikator")
     rec_indicators = []
     
@@ -200,16 +130,6 @@ with tab1:  # Titrasi Asam-Basa
                 st.write(f"Rentang pH: {low} - {high}")
     else:
         st.error("Tidak ditemukan indikator yang cocok. Pertimbangkan penggunaan pH meter.")
-st.markdown("""
-    <style>
-    .custom-bg {
-        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 with tab2:  # Titrasi Redoks
     st.markdown("""
@@ -255,43 +175,8 @@ with tab2:  # Titrasi Redoks
           - Analisis klorin
           - Penentuan sulfit
         """)
-        
-st.markdown("""
-    <style>
-    .custom-bg {
-        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 with tab3:  # Titrasi Kompleksometri
-    st.markdown("""
-    <style>
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.9);  /* Putih transparan (0.9 = hampir solid) */
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .text-container h1, .text-container h2, .text-container h3 {
-        font-weight: 800;
-        color: #000;
-        text-align: center;
-    }
-    .text-container p {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        text-align: justify;
-        margin: 10px 0;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
     st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
         <h2 style="color: #2a3f5f;">Titrasi Kompleksometri</h2>
@@ -378,16 +263,6 @@ with tab3:  # Titrasi Kompleksometri
             - Kondisi: pH 6-8
         - Aplikasi: Analisis logam dalam paduan dan mineral
         """)
-st.markdown("""
-    <style>
-    .custom-bg {
-        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 with tab4:  # Titrasi Pengendapan
     st.markdown("""
@@ -448,18 +323,6 @@ with tab4:  # Titrasi Pengendapan
         """)
 
 # Sidebar dengan informasi tambahan
-st.markdown("""
-    <style>
-    .custom-bg {
-        background-color: rgba(255, 255, 255, 0.85);  /* putih transparan */
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-
 with st.sidebar:
     st.markdown("""
     <div style="background-color: rgba(200,200,200,0.8); padding: 10px; border-radius: 5px;">
@@ -512,114 +375,18 @@ Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi seder
 # Garis pemisah
 st.markdown("---")
 
-    # Aplikasi Edukasi Titrasi
-    <div class="custom-bg">
-     st.markdown("""
+# Nama kelompok di bagian bawah
+st.subheader("Kelompok 8")
+st.markdown("""
+**Nama Anggota:**
 
-        <h4>Aplikasi Edukasi Titrasi</h4>
-        <p>
-        Aplikasi ini dirancang untuk membantu pemahaman konsep dasar titrasi secara interaktif. 
-        Pengguna dapat mempelajari jenis-jenis titrasi, cara kerja, serta simulasi sederhana melalui antarmuka yang user-friendly.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Kelompok dan anggota
-    st.markdown("""
-    <div class="custom-bg">
-        <h4>Kelompok 8</h4>
-        <p><b>Nama Anggota:</b></p>
-        <ul>
-            <li>Afsha Zahira Riyandi (2460311)</li>
-            <li>Intan Permata Sari (2460391)</li>
-            <li>Muhammad Rayhan (2460443)</li>
-            <li>Ramdan Abdul Azis (2460490)</li>
-            <li>Yohanna Angelica Lumbanbatu (246....)</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-
-with tab1:  # Titrasi Asam-Basa
-    # Tambahkan CSS styling agar semua tulisan memiliki latar putih transparan
-    st.markdown("""
-    <style>
-    .custom-bg {
-        background-color: rgba(255, 255, 255, 0.92);
-        padding: 20px;
-        border-radius: 12px;
-        color: #111;
-        margin-bottom: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .custom-bg h2, .custom-bg h4, .custom-bg p, .custom-bg li {
-        color: #111;
-        font-size: 16px;
-    }
-    .custom-bg h2 {
-        font-size: 22px;
-        font-weight: bold;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    # Bungkus konten dalam background putih
-    st.markdown("""
-    <div class="custom-bg">
-        <h2>Titrasi Asam-Basa</h2>
-        <p>Pilih jenis titran dan analit untuk melihat rekomendasi indikator titrasi berdasarkan titik ekuivalen.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    col1, col2 = st.columns(2)
-    with col1:
-        jenis_titran = st.selectbox(
-            "Jenis Titran",
-            ["Asam Kuat", "Asam Lemah", "Basa Kuat", "Basa Lemah"],
-            key="titran_ab"
-        )
-    with col2:
-        jenis_analit = st.selectbox(
-            "Jenis Analit",
-            ["Asam Kuat", "Asam Lemah", "Basa Kuat", "Basa Lemah"],
-            key="analit_ab"
-        )
-
-    # Tambahan: rekomendasi indikator
-    st.markdown("""
-    <div class="custom-bg">
-        <h4>Rekomendasi Indikator</h4>
-        <ul>
-            <li><b>Asam kuat + Basa kuat:</b> Bromtimol Biru (pH 6.0–7.6)</li>
-            <li><b>Asam lemah + Basa kuat:</b> Fenolftalein (pH 8.2–10)</li>
-            <li><b>Asam kuat + Basa lemah:</b> Metil Oranye (pH 3.1–4.4)</li>
-            <li><b>Asam lemah + Basa lemah:</b> Tidak direkomendasikan – gunakan potensiometri</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Tambahan: deskripsi aplikasi
-    st.markdown("""
-    <div class="custom-bg">
-        <h4>Aplikasi Edukasi Titrasi</h4>
-        <p>Aplikasi ini bertujuan untuk memberikan edukasi mengenai pemilihan indikator dalam titrasi asam-basa melalui pendekatan visual dan interaktif.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Tambahan: nama kelompok
-    st.markdown("""
-    <div class="custom-bg">
-        <h4>Kelompok 8</h4>
-        <ul>
-            <li>Afsha Zahira Riyandi (2460311)</li>
-            <li>Intan Permata Sari (2460391)</li>
-            <li>Muhammad Rayhan (2460443)</li>
-            <li>Ramdan Abdul Azis (2460490)</li>
-            <li>Yohanna Angelica Lumbanbatu (246....)</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
+1. Afsha Zahira Riyandi – 2460311  
+2. Intan Permata Sari – 2460391  
+3. Muhammad Rayhan – 2460443  
+4. Ramdan Abdul Azis – 2460490  
+5. Yohana Angelica Lumbanbatu – 2460539
+""")
 
 
-   
 
 
